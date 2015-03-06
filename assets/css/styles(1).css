@@ -10633,8 +10633,8 @@ The height of the hader is controlled by the height of .header-hight-controller;
 
 .hero-img-front-page .img-container {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  left: 118px;
+  top: 77px;
   text-align: right;
 }
 
