@@ -58,8 +58,10 @@ var collapsableNav = function () {
 
 		if (scrollPos > headerOffset) {
 			$('.top-nav .main-nav, .top-nav .logo').addClass('collapsed');
+			$('#topnav').fadeIn();
 		} else {
 			$('.top-nav .main-nav, .top-nav .logo').removeClass('collapsed');
+			$('#topnav').fadeOut();
 		}
 
 	});

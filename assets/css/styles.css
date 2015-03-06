@@ -99,3 +99,21 @@ div.wpcf7 .placeheld {
 	background-color: #E68A00 !important;
 	color: #fff !important;
 }
+
+.has-line:before {
+  	background-color: #0086BF !important;
+}
+
+#topnav {
+	background-color: rgba(255,255,255,0.5);
+	border: 1px #eee solid;
+	bottom: 15px;
+	padding: 8px;
+	position: fixed;
+	right: 15px;
+	z-index: 5;
+}
+
+#topnav img {
+	width: 2em;
+}
