@@ -131,6 +131,23 @@ $(document).ready(function(){
 
 	});
 
-
-
+	scrolls();
 });
+
+function scrolls(){
+	$(".link_to").click(function(e){
+		e.preventDefault();
+
+		var scroll 	= 0;
+		var id 		= $(this).attr('href');
+
+		if(id == "#blog"){
+			window.open("https://www.google.com");
+			return;
+		}
+
+	    $('html, body').animate({
+	        scrollTop: $(id).offset().top - 50
+	    }, 2000);
+	});
+}

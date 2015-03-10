@@ -117,3 +117,13 @@ div.wpcf7 .placeheld {
 #topnav img {
 	width: 2em;
 }
+
+@media screen and (max-width: 1200px){
+	.img-container > img {
+		display: none;
+	}
+
+	.cta-title, .cta-subtext {
+		max-width: 100% !important;
+	}
+}

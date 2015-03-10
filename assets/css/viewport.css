@@ -1,0 +1,48 @@
+@media all and (max-width: 768px){
+	body {
+		padding-top: 50px;
+	}
+
+	.navbar>.container .navbar-brand {
+		padding: 2px 14px;
+	}
+
+	/* HOME */ 
+	#home > .container h1 {
+		font-size: 3em;
+	}
+
+	/* DESIGN */
+	#design > .container h1 {
+		font-size: 30px;
+	}
+
+	#design > .container p {
+		max-width: 30em;
+	}
+
+	/* SOLUTIONS */
+	#solutions > .container h1 {
+		font-size: 27px;
+	}
+
+	/* WORDKED */
+	#worked > .container h1 {
+		font-size: 30px;
+	}
+
+	/* CLIENTS */
+	#clients > .container h1 {
+		font-size: 30px;
+	}
+
+	/* CONTACT */
+	#contact > .container h1 {
+		font-size: 30px;
+		padding: 50px 0 30px;
+	}
+
+	#contact > .container form > div {
+		padding-bottom: 30px;
+	}
+}
