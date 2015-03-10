@@ -77,10 +77,10 @@ button.btn-grey {
 	border-color: #ccc;*/
 
 	display: inline-block;
-	padding: .5em 1.5em;
+	/*padding: .5em 1.5em;*/
 	text-decoration: none;
-	font-size: 1.2em;
-	margin: 0 0.5em 0.5em 0;
+	/*font-size: 1.2em;*/
+	/*margin: 0 0.5em 0.5em 0;*/
 	color: #555;
 	background-color: transparent;
 	border: 1px solid rgba(0,0,0,0.19999999999999996);
@@ -156,7 +156,7 @@ button.btn-grey:hover {
 }
 
 #worked > .container .timeline {
-	height: 300px;
+	height: auto;
 	position: relative;
 	margin-bottom: 60px;
 }
@@ -168,6 +168,11 @@ button.btn-grey:hover {
 
 #worked > .container .timeline:nth-child(2) {
 	margin-top: 180px;
+	/*float: right !important;*/
+	/*padding-left: 10rem;*/
+}
+
+#worked > .container .timeline:nth-child(even) {
 	float: right !important;
 	padding-left: 10rem;
 }
@@ -226,6 +231,14 @@ button.btn-grey:hover {
 
 #worked > .container .timeline .timeline-number:after {
 	height: 120px;
+}
+
+#worked > .container .timeline:last-of-type {
+  	margin-bottom: 0;
+}
+
+#worked > .container .timeline:last-of-type p {
+  	padding-bottom: 0px;
 }
 
 /* CLIENTS */
