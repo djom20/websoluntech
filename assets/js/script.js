@@ -27,7 +27,7 @@ function sizeMode(){
 	var ancho 	= $( window ).width();
 
 	if(ancho > 768){
-		alto -= 100
+		alto -= 95
 		div.css('height', alto);
 	}else{
 		alto -= 50

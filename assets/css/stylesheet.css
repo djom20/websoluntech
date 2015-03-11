@@ -5,7 +5,7 @@
 
 body {
 	overflow-x: hidden;
-	padding-top: 100px;
+	padding-top: 95px;
 }
 
 h1 {
@@ -96,10 +96,10 @@ h1 {
 #topnav {
 	background-color: rgba(255,255,255,0.5);
 	border: 1px #eee solid;
-	bottom: 15px;
+	bottom: 20px;
 	padding: 8px;
 	position: fixed;
-	right: 15px;
+	right: 30px;
 	z-index: 5;
 }
 
@@ -298,6 +298,10 @@ section .breadcrumb {
 }
 
 /* CONTACT */
+#contact {
+	padding-bottom:0;
+}
+
 #contact > .container h1 {
 	font-size: 40px;
 	padding: 0px 0 70px;
