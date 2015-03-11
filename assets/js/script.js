@@ -37,13 +37,21 @@ function sizeMode(){
 
 function gMaps(){
 	var mapOptions = {
-    	zoom: 8,
-    	center: new google.maps.LatLng(-34.397, 150.644),
+    	zoom: 16,
+    	center: new google.maps.LatLng(11.0121669,-74.7929595),
     	mapTypeId: google.maps.MapTypeId.ROADMAP,
-    	 scrollwheel: false,
+    	scrollwheel: false,
   	}
 
   	var map = new google.maps.Map(document.getElementById("maps"), mapOptions);
+
+  	// Creamos un marcador y lo posicionamos en el mapa
+	var marcador = new google.maps.Marker({
+  		position: new google.maps.LatLng(11.012203, -74.792069),
+  		map: map,
+  		title: 'Soluntech SAS',
+  		icon: 'assets/imgs/maps/marker60x90.png'
+	});
 }
 
 function loadScript() {
