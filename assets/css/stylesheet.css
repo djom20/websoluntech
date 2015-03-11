@@ -78,10 +78,33 @@ h1 {
 	margin-left: 6px;
 }
 
+.navbar > .container .navbar-collapse ul.collapsed>li>a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.navbar > .container .navbar-collapse ul>li:last-of-type {
+	margin-left: 14px;
+	position: relative;
+	width: 116px;
+}
+
+.navbar > .container .navbar-collapse ul>li:last-of-type>a {
+	margin-top:30px;
+	text-align:center
+}
+
+.navbar > .container .navbar-collapse ul.collapsed>li:last-of-type>a {
+	margin-top:10px;
+}
+
+.navbar > .container .navbar-brand.collapsed {
+	padding: 4px 14px;
+}
+
 section.row{
 	padding: 70px 0;
 }
-
 
 /* HOME */
 .bgGrey {

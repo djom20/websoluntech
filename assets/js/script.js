@@ -11,10 +11,10 @@ $(function(){
 		var scrollPos = $(document).scrollTop();
 
 		if (scrollPos > headerOffset) {
-			// $('.top-nav .main-nav, .top-nav .logo').addClass('collapsed');
+			$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').addClass('collapsed');
 			$('#topnav').fadeIn();
 		} else {
-			// $('.top-nav .main-nav, .top-nav .logo').removeClass('collapsed');
+			$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').removeClass('collapsed');
 			$('#topnav').fadeOut();
 		}
 	});
