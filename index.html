@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html >
+<html lang="es" ng-app="App">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="">
 		<meta name="description" content="We develop awesome apps! Mobile app developers based in London offering iPhone, Android and Windows mobile apps.">
 
 		<title>Soluntech</title>
 
 		<link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
-		<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" type="text/css" media="all">
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="all">
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" media="all">
 		<link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" media="all">
 		<link rel="stylesheet" href="assets/css/viewport.css" type="text/css" media="all">	
 	</head>
@@ -62,244 +63,18 @@
 			</nav>
 		</header>
 
-		<section id="home" class="row bgGrey">
-			<div class="container">
-				<h1 class="text-center sanspro">
-					<span class="light roboto">
-						Aplicaciones
-					</span>
-					Móviles
-				</h1>
-				<ol class="breadcrumb text-center">
-					<li>Apps</li>
-					<li>Web</li>
-					<li>Software</li>
-					<li>Diseño</li>
-					<li>Desarrollo</li>
-				</ol>
-			</div>
-		</section>
+		<div ng-view></div>
 
-		<section id="development" class="row">
-			<div class="container">
-				<h1 class="text-center sanspro">Desarrollo a la medida</h1>
-				<p class="readerp">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<ol class="breadcrumb text-center">
-					<li>Planeacion</li>
-					<li>UX</li>
-					<li>Desarrollo</li>
-					<li>Testing</li>
-					<li>Entrega</li>
-				</ol>
-			</div>
-		</section>
+		<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular-route.min.js"></script>
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
-		<section id="solutions" class="row bgGrey">
-			<div class="container">
-				<h1 class="text-center sanspro">Creamos soluciones efectivas<br>usando las mejores tendencias</h1>
-				<p class="readerp">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<ol class="breadcrumb text-center">
-					<li>HTML5</li>
-					<li>AngularJS</li>
-					<li>NodeJS</li>
-					<li>CSS3</li>
-					<li>.Net</li>
-				</ol>
-			</div>
-		</section>
-
-		<section id="worked" class="row" style="overflow: hidden;">
-			<div class="container">
-				<h1 class="text-center sanspro">Como trabajamos</h1>
-				<div id="timeline" class="col-md-12">
-					<div class="timeline col-md-6">
-						<h4>Titulo</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<span class="timeline-number">1</span>
-					</div>
-					<div class="timeline col-md-6">
-						<h4>Titulo 2</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<span class="timeline-number">2</span>
-					</div>
-					<div class="timeline col-md-6">
-						<h4>Titulo 3</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<span class="timeline-number">3</span>
-					</div>
-					<div class="timeline col-md-6">
-						<h4>Titulo 4</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<span class="timeline-number">4</span>
-					</div>
-					<div class="timeline col-md-6">
-						<h4>Titulo 5</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<span class="timeline-number">5</span>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="apps" class="row bgGrey">
-			<div class="container">
-				<h1 class="text-center sanspro">Nuestras APPS</h1>
-				<div class="col-md-8" style="margin: 0 auto; float: none;">
-					<div class="row">
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo1.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo2.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo3.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo4.png" class="partner">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="clients" class="row">
-			<div class="container">
-				<h1 class="text-center sanspro">Clientes</h1>
-				<div class="col-md-8" style="margin: 0 auto; float: none;">
-					<div class="row">
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo1.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo2.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo3.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo4.png" class="partner">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="contact" class="row bgGrey">
-			<div class="container">
-				<h1 class="text-center sanspro">Entra en Contacto</h1>
-				<div class="col-md-5">
-					<h3>Enviar un mensaje</h3>
-					<form action="">
-						<div class="form-group">
-						    <label for=""><input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre"></label>
-					  	</div>
-					  	<div class="form-group">
-						    <label for=""><input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email"></label>
-					  	</div>
-					  	<div class="form-group">
-						    <label for=""><input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Telefono"></label>
-					  	</div>
-					  	<div class="form-group">
-						    <label for=""><textarea class="form-control" cols="30" rows="3" placeholder="Mensaje"></textarea></label>
-					  	</div>
-					  	<button type="submit" class="btn btn-grey pull-right">Enviar</button>
-					</form>
-				</div>				
-				<div class="col-md-5 info">
-					<h3>Soluntech SAS</h3>
-					<p>
-					   	<span class="group">
-					   		<span>Direccion: Via 40 # 73 - 290. Oficina 414.</span>
-					   		<span>Centro de Negocios Mix 40.</span>
-					   		<span>Barranquilla, Colombia.</span>
-					   	</span>
-						<span class="group">
-							<span>Tel: +57 (5) 368 1722</span>
-							<span>Cel: +57 320 517 9361</span>
-							<span>Fax: +57 5 319 7601</span>
-						</span>
-						<span>Email: <a href="mailto:info@soluntech.com">info@soluntech.com</a></span>
-					</p>
-				</div>
-			</div>
-			<div id="maps"></div>
-		</section>
-
-		<div id="topnav" style="display:none;" onclick="scrollToTop();">
-			<img src="assets/imgs/flecha.png" alt="">
-		</div>
-
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  			<div class="modal-dialog">
-    			<div class="modal-content">
-      				<div class="modal-header">
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      				</div>
-      				<div class="modal-body">
-        				...
-      				</div>
-      				<div class="modal-footer">
-        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        				<button type="button" class="btn btn-primary">Save changes</button>
-      				</div>
-    			</div>
-  			</div>
-		</div>
-
-		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/config.js"></script>
 		<script type="text/javascript" src="assets/js/script.js"></script>
-		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/controllers.js"></script>
+
 		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
 	</body>
 </html>
