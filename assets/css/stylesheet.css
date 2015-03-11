@@ -14,6 +14,7 @@ h1 {
 
 ::-webkit-scrollbar {
 	display: none;
+	-moz-appearance: none !important;
 }
 
 /* Menu */
@@ -221,7 +222,7 @@ section .breadcrumb {
    	z-index: 1;
 }
 
-.content-blurred .content {
+.content-blurred .navbar {
 	-webkit-backface-visibility:hidden;
 	-moz-backface-visibility:hidden;
 	-ms-backface-visibility:hidden;

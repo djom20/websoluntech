@@ -33,7 +33,6 @@ function sizeMode(){
 		alto -= 50
 		div.css('height', alto);
 	}
-
 }
 
 function gMaps(){
@@ -60,6 +59,13 @@ function loadScript() {
   	script.type = "text/javascript";
   	script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' + '&signed_in=true&callback=gMaps';
   	document.body.appendChild(script);
+}
+
+function scrollTop(){
+	console.log('click');
+	// $('html, body').animate({
+ //        scrollTop: 0
+ //    }, 2000);
 }
 
 function IOS7BlurredHeader(){
