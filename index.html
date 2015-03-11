@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html >
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,8 @@
 			</ul>
 		</nav> -->
 
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <header class="navbar-fixed-top">
+		<nav class="navbar navbar-default visible-lg-md" role="navigation">
   			<div class="container">
     			<div class="navbar-header">
       				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -65,8 +66,11 @@
         						<span>Trabajo</span>
         					</a>
         				</li>
-        				<li>
-        					<a href="#" style="padding-top: 39px;">
+        				<li style="position: relative;
+margin-left: 14px;
+width: 116px;">
+<br>
+        					<a href="#" class="btn-grey small" style="margin-top:10px; text-align:center">
         						Contacto
         					</a>
         				</li>
@@ -74,10 +78,15 @@
     			</div>
   			</div>
 		</nav>
+		</header>
 
 		<section id="home" class="row bgGrey">
 			<div class="container">
-				<h1 class="text-center">Aplicaciones<br>Mobiles</h1>
+				<h1 class="text-center sanspro" style="letter-spacing:1.5px"><span class="light roboto" style="margin-bottom:10px; display:block; font-size:.9em; ">Aplicaciones</span>
+								
+				Móviles</h1>
+				<br>
+				<br>
 				<ol class="breadcrumb text-center">
 					<li>Apps</li>
 					<li>Web</li>
@@ -90,8 +99,8 @@
 
 		<section id="design" class="row">
 			<div class="container">
-				<h1 class="text-center">Diseño a la medida</h1>
-				<p class="text-center">
+				<h1 class="text-center sanspro">Diseño a la medida</h1>
+				<p class="readerp">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -111,12 +120,20 @@
 
 		<section id="solutions" class="row bgGrey">
 			<div class="container">
-				<h1 class="text-center">Creamos soluciones efectivas<br>usando las mejores tendencias</h1>
+				<h1 class="text-center sanspro">Creamos soluciones efectivas<br>usando las mejores tendencias</h1>
+				<p class="readerp">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
 				<ol class="breadcrumb text-center">
 					<li>HTML5</li>
-					<li>AngularJs</li>
-					<li>NodeJs</li>
-					<li>Css3</li>
+					<li>AngularJS</li>
+					<li>NodeJS</li>
+					<li>CSS3</li>
 					<li>.Net</li>
 				</ol>
 			</div>
@@ -124,7 +141,7 @@
 
 		<section id="worked" class="row" style="overflow: hidden;">
 			<div class="container">
-				<h1 class="text-center">Como trabajamos</h1>
+				<h1 class="text-center sanspro">Como trabajamos</h1>
 				<div class="col-md-12">
 					<div class="timeline col-md-6">
 						<h4>Titulo</h4>
@@ -168,7 +185,7 @@
 
 		<section id="clients" class="row bgGrey">
 			<div class="container">
-				<h1 class="text-center">Clientes</h1>
+				<h1 class="text-center sanspro">Nuestras APPS</h1>
 				<div class="col-md-8" style="margin: 0 auto; float: none;">
 					<div class="row">
 						<div class="col-md-3 col-sm-3 col-xs-6">
@@ -188,11 +205,36 @@
 			</div>
 		</section>
 
-		<section id="contact" class="row">
+		<section id="clients" class="row">
 			<div class="container">
-				<h1 class="text-center">Contacto</h1>
-				<form action="">
-					<div class="col-md-6">
+				<h1 class="text-center sanspro">Clientes</h1>
+				<div class="col-md-8" style="margin: 0 auto; float: none;">
+					<div class="row">
+						<div class="col-md-3 col-sm-3 col-xs-6">
+							<img src="assets/imgs/partners/logo1.png" class="partner">
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-6">
+							<img src="assets/imgs/partners/logo2.png" class="partner">
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-6">
+							<img src="assets/imgs/partners/logo3.png" class="partner">
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-6">
+							<img src="assets/imgs/partners/logo4.png" class="partner">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="row smootGray" style="padding-bottom:0">
+			<div class="container">
+				<h1 class="text-center sanspro">Entra en Contacto</h1>
+				
+					<div class="col-md-5">
+					<h3>Enviar un Mensaje.</h3>
+<br>
+					<form action="">
 						<div class="form-group">
 						    <label for=""><input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre"></label>
 					  	</div>
@@ -205,14 +247,42 @@
 					  	<div class="form-group">
 						    <label for=""><textarea class="form-control" cols="30" rows="3" placeholder="Mensaje"></textarea></label>
 					  	</div>
+					  	<br>
 					  	<button type="submit" class="btn btn-grey pull-right">Enviar</button>
-					</div>
-					<div class="col-md-6">
-						<p>Encuentranos en</p>
-						<div id="maps"></div>
-					</div>
 				</form>
+
+					</div>				
+					<div class="col-md-5 pull-right">
+						<h3>Soluntech SAS.</h3>
+
+						<p style="font-size:16px; line-height:1.5;">
+						
+						   <br>
+						   Direccion: Via 40 # 73 - 290. Oficina 414.  <br>
+						   Centro de Negocios Mix 40. <br>
+						   Barranquilla, Colombia.
+
+<br>
+<br>
+Tel: +57 (5) 368 1722
+<br>
+Fax: +57 5 319 7601
+<br>
+Cel: +57 320 517 9361
+<br>
+<br>
+Email: <a href="mailto:info@soluntech.com">info@soluntech.com</a>
+
+
+						</p>
+<br>
+						
+					</div>
 			</div>
+			<br>
+			<br>
+			<br>
+			<div id="maps"></div>
 		</section>
 
 		<div id="topnav" style="display:none;">
