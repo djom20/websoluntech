@@ -114,7 +114,6 @@ section.row{
 	color: #fff !important;
 	-webkit-box-shadow: 0px 0px 25px #fe5607;
 	box-shadow: 0px 0px 25px #fe5607;
-	border:orange;
 }
 
 .btn-grey.small{
@@ -319,7 +318,7 @@ section.row{
 }
 
 #contact > .container .info > p > .group {
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 }
 
 #contact > .container .info > p > .group span {
