@@ -1,6 +1,8 @@
 $(function(){
 	sizeMode();
 	IOS7BlurredHeader();
+	scrolls();
+
 	window.onload = loadScript;
 	
 	$(window).resize(function() {
@@ -63,6 +65,25 @@ function loadScript() {
 
 function scrollToTop(){
 	$('html, body').animate({ scrollTop: 0 }, 2000);
+}
+
+function scrolls(){
+	$(".link_to").click(function(e){
+		e.preventDefault();
+
+		var id 		= $(this).attr('href');
+		var scroll 	= $(id).offset().top - 50;
+
+		if(id == "#home"){
+			scroll = 0;
+		}else if(id == "#apps" || id == "#contact"){
+			scroll -= 5;
+		}
+
+		$('html, body').animate({
+			scrollTop: scroll
+		}, 2000);
+	});
 }
 
 function IOS7BlurredHeader(){

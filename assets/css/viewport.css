@@ -144,12 +144,12 @@
 		font-size: 3em;
 	}
 
-	/* DESIGN */
-	#design > .container h1 {
+	/* DEVELOPMENT */
+	#development > .container h1 {
 		font-size: 30px;
 	}
 
-	#design > .container p {
+	#development > .container p {
 		max-width: 30em;
 	}
 

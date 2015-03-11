@@ -242,14 +242,14 @@ section .breadcrumb {
 	margin-bottom:10px;
 }
 
-/* DESIGN */
-#design > .container h1 {
+/* DEVELOPMENT */
+#development > .container h1 {
 	font-size: 40px;
 	padding: 0px 0 70px;
 	color:#555;
 }
 
-#design > .container p {
+#development > .container p {
 	max-width: 45em;
 	margin: 0 auto;
 	padding-bottom: 120px;
@@ -281,19 +281,19 @@ section .breadcrumb {
 	padding-bottom: 120px;
 }
 
-/* CLIENTS */
-#clients > .container h1 {
+/* CLIENTS & APPS */
+#clients > .container h1, #apps > .container h1 {
 	font-size: 40px;
 	padding: 0px 0 70px;
 }
 
-#clients > .container p {
+#clients > .container p, #apps > .container p {
 	max-width: 45em;
 	margin: 0 auto;
 	padding-bottom: 120px;
 }
 
-#clients .partner{
+#clients .partner, #apps .partner {
 	width: 100%;
 }
 
