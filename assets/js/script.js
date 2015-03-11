@@ -61,11 +61,8 @@ function loadScript() {
   	document.body.appendChild(script);
 }
 
-function scrollTop(){
-	console.log('click');
-	// $('html, body').animate({
- //        scrollTop: 0
- //    }, 2000);
+function scrollToTop(){
+	$('html, body').animate({ scrollTop: 0 }, 2000);
 }
 
 function IOS7BlurredHeader(){
