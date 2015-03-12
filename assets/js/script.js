@@ -9,7 +9,7 @@ $(function(){
 	window.onload = loadScript;
 	
 	$(window).resize(function() {
-		sizeMode();
+		resizeMode();
 	});
 
 	$(document).scroll( function() {
