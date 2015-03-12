@@ -1,22 +1,23 @@
 $(function(){
 
-	$(document).ready(function() {
+	$(document).ready(function(){
 		resizeMode();
 		IOS7BlurredHeader();
 		scrolls();
+		videoBackground();
 	});
 
 	window.onload = loadScript;
 	
-	$(window).resize(function() {
+	$(window).resize(function(){
 		resizeMode();
 	});
 
-	$(document).scroll( function() {
+	$(document).scroll( function(){
 		var headerOffset = 100;
 		var scrollPos = $(document).scrollTop();
 
-		if (scrollPos > headerOffset) {
+		if (scrollPos > headerOffset){
 			$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').addClass('collapsed');
 			$('#topnav').fadeIn();
 		} else {
@@ -26,17 +27,36 @@ $(function(){
 	});
 });
 
+function videoBackground(){
+	var videoFiles = 
+	[
+		['https://s3.amazonaws.com/soluntech/videos/background.mp4', 'video/mp4'],
+		['https://s3.amazonaws.com/soluntech/videos/background.webm', 'video/webm']
+	];
+
+	setTimeout(function(){
+		console.log('cargando videos');
+		$('#videos').videobackground({
+			videoSource: videoFiles,
+			loop: true
+		});
+		$('#videos').videobackground('play');
+	}, 50);
+}
+
 function resizeMode(){
 	var alto 	= $( window ).height();
 	var ancho 	= $( window ).width();
 
+	$('#videos').videobackground('resize');
+
 	setTimeout(function(){
 		if(ancho > 768){
 			alto -= 95
-			$('#home').css('height', alto);
+			$('#home, #videos, #videos>video').css('height', alto);
 		}else{
 			alto -= 70
-			$('#home').css('height', alto);
+			$('#home, #videos, #videos>video').css('height', alto);
 		}
 	}, 50);
 }
