@@ -12,7 +12,116 @@
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-	$html 	= "<html>
+    $_REQUEST['name'] 		= "Jonathan Olier";
+	$_REQUEST['email'] 		= "jolier@soluntech.com";
+	$_REQUEST['tel'] 		= "3177963884";
+	$_REQUEST['message'] 	= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maiores, magnam illo qui, quidem earum accusamus sapiente molestias adipisci vel vero molestiae facilis error provident doloremque eaque quisquam quaerat eligendi.";
+
+	$table 	= "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"max-width: 600px; margin: auto;\">
+	                <tbody>
+	                    <tr>
+	                    	<td style=\"padding-bottom: 8px;\">
+	                    		<table style=\"background-color:#fff;\">
+	                    			<tbody>
+	                    				<tr>
+					                        <td style=\"color: #1e80b6; padding-top: 20px; padding-left: 20px; padding-right: 20px;\">
+					                            <p> Nombre </p>
+					                        </td>
+					                        <td style=\" padding-top: 20px; text-align: right; padding-right: 20px;\">
+					                            ". $_REQUEST['name'] ."
+					                        </td>
+	                    				</tr>
+	                    				<tr>
+											<td style=\"color: #1e80b6; padding-left: 20px; padding-right: 20px;\">
+					                            <p> Email </p>
+					                        </td>
+					                        <td style=\"text-align: right; padding-right: 20px;\">
+					                            ". $_REQUEST['email'] ."
+					                        </td>
+	                    				</tr>
+	                    				<tr>
+					                        <td style=\"color: #1e80b6; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;\">
+					                            <p> Telefono </p>
+					                        </td>
+					                        <td style=\"text-align: right; padding-right: 20px;\">
+					                            ". $_REQUEST['tel'] ."
+					                        </td>
+	                    				</tr>
+				                    </tbody>
+	                    		</table>
+	                    	</td>
+	                    </tr>
+	                    <tr>
+	                        <td style=\"padding-bottom: 8px;\">
+	                    		<table style=\"background-color:#fff;\">
+	                    			<tbody>
+	                    				<tr>
+					                        <td style=\"color: #1e80b6; padding-left: 20px; padding-top: 20px; padding-bottom: 10px;\">
+					                            <p> Mensaje </p>
+					                        </td>
+	                    				</tr>
+	                    				<tr>
+					                        <td style=\"text-align: left; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;\">
+					                            ". $_REQUEST['message'] ."
+					                        </td>
+	                    				</tr>
+				                    </tbody>
+	                    		</table>
+	                    	</td>
+	                    </tr>
+	                    <tr>
+							<td>
+								<table width=\"100%\" border=\"0\" align=\"center\" style=\"color:#353e4a;font-family:Arial,sans-serif;margin:auto;background-color:#ffffff\" cellpadding=\"0\" cellspacing=\"0\">
+                                    <tbody>
+	                                    <tr>
+	                                        <td style=\"padding-bottom:15px; padding-top:15px\" align=\"center\">
+	                                            <table>
+	                                                <tbody>
+		                                                <tr>
+		                                                    <td align=\"center\" style=\"background-color:#ef5401;padding:7px;font-family:Arial,sans-serif; max-width: 250px;\">
+		                                                        <a style=\"background-color:#ef5401;font-family:Arial,sans-serif;border:medium none;border-radius:3px;color:white;font-size:21px;min-height:30px;text-decoration:none;padding-top:7px;padding-bottom:7px;padding-left:30px;padding-right:30px\" href=\"http://www.soluntech.com\" target=\"_blank\">
+		                                                        	Conocenos
+		                                                        </a>
+		                                                    </td>
+		                                                </tr>
+	                                            	</tbody>
+	                                            </table>
+	                                        </td>
+	                                    </tr>
+	                                </tbody>
+                                </table>
+							</td>
+	                    </td>
+	                    <tr>
+							<td style=\"padding-bottom: 0px;\">
+								<table width=\"100%\" border=\"0\" align=\"center\" style=\"font-family:Arial,sans-serif;font-size:15px;margin:auto;background-color:#ffffff;color:#353e4a\" cellpadding=\"0\" cellspacing=\"0\">
+                                    <tbody>
+                                        <tr><td style=\"padding-left:25px;padding-right:15px;padding-top:20px\">Att:</td></tr>
+                                        <tr><td style=\"font-weight:bold;padding-top:10px;padding-bottom:10px;padding-left:25px;padding-right:15px\"><i>El equipo de Soluntech</i></td></tr>
+                                        <tr><td style=\"height:20px\">&nbsp;</td></tr>
+                                    </tbody>
+                                </table>
+							</td>
+	                    </tr>
+	                    <td style=\"background-color:#ececec\">
+                            <table width=\"100%\" border=\"0\" align=\"center\" style=\"color:#353e4a;font-family:Arial,sans-serif;font-size:14px;margin:auto;padding-bottom:10px\">
+                                <tbody>
+                                    <tr>
+                                        <td style=\"color:#717175;font-size:12px;padding-top:10px;padding-bottom:10px\">
+                                            Este email se ha generado automáticamente. Por favor, no conteste a este email.
+                                            Si tiene alguna pregunta o necesita ayuda, por favor haga click en <a href=\" \" style=\"color:#353e4a\" target=\"_blank\">Ayuda</a>.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"color:#717175;font-size:12px;padding-top:10px;padding-bottom:10px\">Si no desea recibir más alertas como esta, por favor, haga click en <a href=\" \" style=\"color:#353e4a\ target=\"_blank\">Baja de alertas</a>.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+	                </tbody>
+	            </table>";
+
+	$html = "<html>
                 <head>
                     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
                     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">
@@ -27,33 +136,24 @@
                     </style>
                 </head>
                 <body>
-                	<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border:2px solid #9b9b9b\">
-		                <tbody>
-		                    <tr>
+	                <table style=\"background-color:#ececec; width: 100%!important;\">
+						<tbody>
+							<tr>
 		                        <td colspan=\"3\" style=\"text-align: center;\">
-		                            <img width=\"135\" height=\"131\" src=\" \" alt=\"header\" />
+		                            <img width=\"170\" height=\"131\" src=\"http://www.soluntech.com/_/rsrc/1412805517236/config/customLogo.gif?revision=7\" alt=\"Logo de Soluntech\" />
 		                        </td>
 		                    </tr>
-		                    <tr>
-		                        <td colspan=\"3\" style=\"border-bottom:1px solid #9b9b9b; text-align: center;\">
-		                            <p> Titulo </p>
-		                        </td>
-		                    </tr>
-		                    <tr>
-		                        <td colspan=\"3\" style=\"border-bottom:1px solid #9b9b9b\">
-		                            <center><strong>Comentarios</strong></center>
-		                        </td>
-		                    </tr>
-		                    <tr bgcolor=\"#e7ecf1\">
-		                        <td colspan=\"3\">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam voluptatum in, odio consequatur possimus velit maiores consectetur distinctio ab minima, debitis cupiditate. Veritatis veniam cumque ut voluptates voluptate labore minima.
-		                        </td>
-		                    </tr>
-		                </tbody>
-		            </table>
-		        </body>
-		    </html>";
+							<tr>
+								<td>". $table ."</td>
+							</tr>
+						</tbody>
+					</table>
+				</body>
+			</html>"; 
 
 	if(mail('jolier@soluntech.com', 'Send', $html, $headers)){
 		echo 'Se envio el correo correctamente.';
+	}else{
+		// echo 'No se envio el correo';
+		echo $html;
 	}
