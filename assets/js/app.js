@@ -136,7 +136,19 @@ function loadScript() {
 }
 
 function scrollToTop(){
-    $('html, body').animate({ scrollTop: 0 }, 2000);
+
+    var media = $("body").height();
+    var maxTime = 1000;
+
+    var offset = $("#topnav").offset().top;
+
+    console.log(offset)
+
+    var time = (offset * maxTime) / media;
+
+    console.log(time, 'time');
+
+    $('html, body').animate({ scrollTop: 0 }, time);
 }
 
 function scrolls(){

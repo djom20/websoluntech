@@ -2,6 +2,10 @@
   "name": "Soluntech-web",
   "version": "0.0.1",
   "dependencies": {
-    
+    "angularjs" : "latest",
+    "angular-route" : "latest",
+    "bootstrap" : "latest",
+    "jquery" : "latest",
+    "less" : "latest"
   }
 }

@@ -1,48 +1,13 @@
 {
-  "title": "Genesis Skeleton",
-  "name": "genesis-skeleton",
-  "description": "Modern application skeleton - HTML5 Boilerplate + Angular + Express + Grunt + LiveReload + Bootstrap + Bower",
+  "title": "Live Injector",
+  "name": "Live Injector",
+  "description": "Inyector de Scripts y Estilos en tiempo real",
   "version": "0.0.1",
   "author": {
-    "name": "Eric Clemmons",
-    "email": "eric@smarterspam"
+    "name": "Soluntech",
+    "email": "info@soluntech.com"
   },
-  "homepage": "https://github.com/ericclemmons/genesis-skeleton",
-  "bugs": "https://github.com/ericclemmons/genesis-skeleton/issues",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.github.com/ericclemmons/genesis-skeleton/master/LICENSE"
-    }
-  ],
-  "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
-  },
-  "scripts": {
-    "start": "./node_modules/.bin/grunt build && node src/server/server",
-    "install": "bower install",
-    "test": "./node_modules/.bin/grunt build"
-  },
-  "dependencies": {
-    "bower": "0.9.2",
-    "express": "3.0.5",
-    "grunt": "~0.4.0",
-    "grunt-cli": "~0.1.6",
-    "grunt-angular-templates": "~0.3.0",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-concat": "~0.1.2",
-    "grunt-contrib-copy": "~0.4.0",
-    "grunt-contrib-jshint": "~0.1.1",
-    "grunt-contrib-less": "~0.5.0",
-    "grunt-contrib-livereload": "~0.1.1",
-    "grunt-contrib-mincss": "~0.4.0",
-    "grunt-contrib-uglify": "~0.1.1",
-    "grunt-express-server": "~0.1.0",
-    "grunt-parallel": "0.0.2",
-    "grunt-regarde": "~0.1.1",
-    "grunt-usemin": "~0.1.4",
-    "grunt-verbosity": "~0.1.0",
-    "socket.io": ">= 0.9.6"
-  }
+  "dependencies" : {
+     "gulp" : "latest"
+  } 
 }
