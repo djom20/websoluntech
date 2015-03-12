@@ -19,4 +19,32 @@ angular.module('App')
         console.log('Element Deteled');
         return true;
     }
+})
+.factory('$content', function($http){
+    this.url        = undefined;    
+    this.base_url   = 'http://54.84.73.92/wp/wp-json';
+
+    this.posts = function() {
+        this.url = '/posts';
+        return this;
+    }
+
+    this.post = function(id) {        
+        this.post_id    = id;
+        this.url        = '/posts/' + this.post_id ;
+        return this;
+    }
+
+    this.destroy = function() {
+        this.url = '';
+        return this;
+    }
+
+    this.get = function() {
+        var url = this.url;
+        this.destroy();
+        return (url) ? $http.get(this.base_url + url) : false;
+    }
+
+    return this;
 });
