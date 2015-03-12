@@ -1,87 +1,69 @@
 <!DOCTYPE html>
-<html >
+<html lang="es" ng-app="App">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="">
 		<meta name="description" content="We develop awesome apps! Mobile app developers based in London offering iPhone, Android and Windows mobile apps.">
 
 		<title>Soluntech</title>
 
 		<link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
-		<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" type="text/css" media="all">
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="all">
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" media="all">
 		<link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" media="all">
 		<link rel="stylesheet" href="assets/css/viewport.css" type="text/css" media="all">	
 	</head>
 	<body>
-		<!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<a class="navbar-brand" href="#" style="padding: 2px 14px;">
-				<img src="assets/imgs/customLogo.png" style="width: 3em; float: left;">
-				<span style="float: left; margin-top: 13px; margin-left: 6px;">Soluntech.com</span>
-			</a>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="active">
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<a href="#">Link</a>
-				</li>
-			</ul>
-		</nav> -->
-
-  <header class="navbar-fixed-top">
-		<nav class="navbar navbar-default visible-lg-md" role="navigation">
-  			<div class="container">
-    			<div class="navbar-header">
-      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-      				</button>
-      				<a class="navbar-brand" href="#">
-						<img src="assets/imgs/customLogo.png">
-						<span>Soluntech.com</span>
-					</a>
-    			</div>
-    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      				<ul class="nav navbar-nav navbar-right">
-        				<li>
-        					<a href="#">
-        						<span>Desarrollo</span>
-        						<span>a la Medida</span>
-        					</a>
-        				</li>
-        				<li>
-        					<a href="#">
-        						<span>Nuestras</span>
-        						<span>Apps</span>
-        					</a>
-        				</li>
-        				<li>
-        					<a href="#">
-        						<span>Nuestro</span>
-        						<span>Trabajo</span>
-        					</a>
-        				</li>
-
-        				<li style="position: relative;
-margin-left: 14px;
-width: 116px;">
-<br>
-        					<a href="#" class="btn-grey small" style="margin-top:10px; text-align:center">
-
-        						Contacto
-        					</a>
-        				</li>
-      				</ul>
-    			</div>
-  			</div>
-		</nav>
+  		<header class="navbar-fixed-top">
+			<nav class="navbar navbar-default visible-lg-md" role="navigation">
+	  			<div class="container">
+	    			<div class="navbar-header">
+	      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+	      				</button>
+	      				<a class="navbar-brand link_to" href="#home">
+							<img src="assets/imgs/customLogo.png">
+							<span>Soluntech.com</span>
+						</a>
+	    			</div>
+	    			<div class="navbar-collapse collapse" id="navbar-collapse">
+	      				<ul class="nav navbar-nav navbar-right">
+	        				<li>
+	        					<a class="link_to" href="#development">
+	        						<span>Desarrollo</span>
+	        						<span>a la Medida</span>
+	        					</a>
+	        				</li>
+	        				<li>
+	        					<a class="link_to" href="#worked">
+	        						<span>Nuestro</span>
+	        						<span>Trabajo</span>
+	        					</a>
+	        				</li>
+	        				<li>
+	        					<a class="link_to" href="#apps">
+	        						<span>Nuestras</span>
+	        						<span>Apps</span>
+	        					</a>
+	        				</li>
+	        				<li>
+	        					<a class="btn-grey small link_to" href="#contact">
+	        						Contacto
+	        					</a>
+	        				</li>
+	      				</ul>
+	    			</div>
+	  			</div>
+			</nav>
 		</header>
 
+<<<<<<< HEAD
 		<section id="home" class="row bgGrey">
 			<div class="container">
 				<h1 class="text-center sanspro" style="letter-spacing:1.5px"><span class="light roboto" style="margin-bottom:10px; display:block; font-size:.9em; ">Aplicaciones</span>
@@ -209,142 +191,20 @@ width: 116px;">
 				</div>
 			</div>
 		</section>
+=======
+		<div ng-view></div>
+>>>>>>> 61d1b226db90b270d0888f25624b29566b83e7d1
 
-		<section id="clients" class="row bgGrey">
-			<div class="container">
-				<h1 class="text-center sanspro">Nuestras APPS</h1>
-				<div class="col-md-8" style="margin: 0 auto; float: none;">
-					<div class="row">
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo1.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo2.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo3.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo4.png" class="partner">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular-route.min.js"></script>
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
-		<section id="clients" class="row">
-			<div class="container">
-				<h1 class="text-center sanspro">Clientes</h1>
-				<div class="col-md-8" style="margin: 0 auto; float: none;">
-					<div class="row">
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo1.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo2.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo3.png" class="partner">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-6">
-							<img src="assets/imgs/partners/logo4.png" class="partner">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="contact" class="row smootGray" style="padding-bottom:0">
-			<div class="container">
-				<h1 class="text-center sanspro">Entra en Contacto</h1>
-				
-					<div class="col-md-5">
-					<h3>Enviar un Mensaje.</h3>
-<br>
-					<form action="">
-						<div class="form-group">
-						    <label for=""><input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre"></label>
-					  	</div>
-					  	<div class="form-group">
-						    <label for=""><input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email"></label>
-					  	</div>
-					  	<div class="form-group">
-						    <label for=""><input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Telefono"></label>
-					  	</div>
-					  	<div class="form-group">
-						    <label for=""><textarea class="form-control" cols="30" rows="3" placeholder="Mensaje"></textarea></label>
-					  	</div>
-					  	<br>
-					  	<button type="submit" class="btn btn-grey pull-right">Enviar</button>
-				</form>
-
-					</div>				
-					<div class="col-md-5 pull-right">
-						<h3>Soluntech SAS.</h3>
-
-						<p style="font-size:16px; line-height:1.5;">
-						
-						   <br>
-						   Direccion: Via 40 # 73 - 290. Oficina 414.  <br>
-						   Centro de Negocios Mix 40. <br>
-						   Barranquilla, Colombia.
-
-<br>
-<br>
-Tel: +57 (5) 368 1722
-<br>
-Fax: +57 5 319 7601
-<br>
-Cel: +57 320 517 9361
-<br>
-<br>
-Email: <a href="mailto:info@soluntech.com">info@soluntech.com</a>
-
-
-						</p>
-<br>
-						
-					</div>
-			</div>
-			<br>
-			<br>
-			<br>
-			<div id="maps"></div>
-		</section>
-
-		<div id="topnav" style="display:none;">
-			<img src="assets/imgs/flecha.png" alt="">
-		</div>
-
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  			<div class="modal-dialog">
-    			<div class="modal-content">
-      				<div class="modal-header">
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      				</div>
-      				<div class="modal-body">
-        				...
-      				</div>
-      				<div class="modal-footer">
-        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        				<button type="button" class="btn btn-primary">Save changes</button>
-      				</div>
-    			</div>
-  			</div>
-		</div>
-
-		<!-- // <script type="text/javascript" src="assets/js/pt.js"></script> -->
-		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-		<!-- // <script type="text/javascript" src="assets/js/jquery.form.min.js"></script> -->
+		<script type="text/javascript" src="assets/js/config.js"></script>
 		<script type="text/javascript" src="assets/js/script.js"></script>
-		<!-- // <script type="text/javascript" src="assets/js/navigation.js"></script> -->
-		<!-- // <script type="text/javascript" src="assets/js/skip-link-focus-fix.js"></script> -->
-		<!-- // <script type="text/javascript" src="assets/js/plugins.js"></script> -->
-		<!-- // <script type="text/javascript" src="assets/js/app.js"></script> -->
-		<!-- // <script type="text/javascript" src="assets/js/nodes-contact.js"></script> -->
-		<!-- // <script type="text/javascript" src="assets/js/modernizr.js"></script> -->
-		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js">
+		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/controllers.js"></script>
+
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
 	</body>
 </html>

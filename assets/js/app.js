@@ -1,153 +1,68 @@
-(function($,sr){
+var App = angular.module('App', [
+    'ngRoute',
+    'Controllers'
+]);
 
-  // debouncing function from John Hann
-  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-  var debounce = function (func, threshold, execAsap) {
-	  var timeout;
+App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
+    function($routeProvider, $httpProvider, $locationProvider) {
+        //Enable cross domain calls
+        $httpProvider.defaults.useXDomain = true;
 
-	  return function debounced () {
-		  var obj = this, args = arguments;
-		  function delayed () {
-			  if (!execAsap)
-				  func.apply(obj, args);
-			  timeout = null;
-		  };
+        //Remove the header used to identify ajax call  that would prevent CORS from working
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        
+        // Use x-www-form-urlencoded Content-Type
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
-		  if (timeout)
-			  clearTimeout(timeout);
-		  else if (execAsap)
-			  func.apply(obj, args);
+        var param = function(obj) {
+            var query = '', name, value, fullSubName, subName, subValue, innerObj, i;
 
-		  timeout = setTimeout(delayed, threshold || 100);
-	  };
-  }
-  // smartresize
-  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+            for (name in obj) {
+                value = obj[name];
 
-})(jQuery,'smartresize');
-// Functions
+                if (value instanceof Array) {
+                    for (i = 0; i < value.length; ++i) {
+                        subValue = value[i];
+                        fullSubName = name + '[' + i + ']';
+                        innerObj = {};
+                        innerObj[fullSubName] = subValue;
+                        query += param(innerObj) + '&';
+                    }
+                }
+                else if (value instanceof Object) {
+                    for (subName in value) {
+                        subValue = value[subName];
+                        fullSubName = name + '[' + subName + ']';
+                        innerObj = {};
+                        innerObj[fullSubName] = subValue;
+                        query += param(innerObj) + '&';
+                    }
+                }
+                else if (value !== undefined && value !== null)
+                    query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
+            }
 
-var fadeInOnScroll = function () {
+            return query.length ? query.substr(0, query.length - 1) : query;
+        };
 
-	var divs = $('.is-invisible');
+        // Override $http service's default transformRequest
+        $httpProvider.defaults.transformRequest = [function(data) {
+            return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
+        }];
 
-	$(document).on('scroll', function() {
-		$.each(divs, function(i, item) {
-			if( $(item).offset().top <= $(window).scrollTop() + $(window).height() ) {
-				$(item).addClass('is-visible');
-			}
-		});
-	});
+        $routeProvider.
+            when('/', {
+                templateUrl: 'partials/home.html',
+                controller: 'HomeCtrl'
+            }).
+            otherwise({
+                redirectTo: '/'
+            });
 
-	// Fade in elements in the VP on docoment.ready
-	$.each(divs, function(i, item) {
-		if( $(item).offset().top <= $(window).scrollTop() + $(window).height() ) {
-			$(item).addClass('is-visible');
-		}
-	});
-};
+            //$locationProvider.html5Mode(true);
+    }]
+)
+.run(function($rootScope){
 
-
-var collapsableNav = function () {
-	$('.top-nav .main-nav, .top-nav .logo').removeClass('collapsed');
-
-	$(document).scroll( function() {
-
-		var headerOffset = 100;
-		var scrollPos = $(document).scrollTop();
-
-		if (scrollPos > headerOffset) {
-			$('.top-nav .main-nav, .top-nav .logo').addClass('collapsed');
-			$('#topnav').fadeIn();
-		} else {
-			$('.top-nav .main-nav, .top-nav .logo').removeClass('collapsed');
-			$('#topnav').fadeOut();
-		}
-
-	});
-};
-
-var accordionAnimation = function(accordion){
-	var $this = $(accordion);
-	var $link = $this.find('dd > a');
-
-	$this.find('.content.active').css('height', $this.find('.content.active').children().outerHeight());
-
-	$link.on('click', function(){
-		if( $(this).attr('href') == '#' + $this.find('.content.active').attr('id') ) {
-			$(this).next().css('height', 0);
-		} else {
-			$this.find('.content.active').css('height', 0);
-			$(this).next().css('height', $(this).next().children().outerHeight());
-		}
-
-	});
-};
-
-var setFooterSpace = function() {
-
-	// Makes sure padding is enough in bottom to have the footer position absolute
-	var wrapper = $('.main-content-container')
-	var footerHeight = $('.page-footer').outerHeight();
-
-	wrapper.css('padding-bottom', footerHeight);
-};
-
-// Docment Ready
-
-$(document).ready(function(){
-	$(document).foundation();
-
-	accordionAnimation($('.accordion.animated'));
-
-	// $('form.wpcf7-form .wpcf7-form-control-wrap').next().remove();
-	// $('.wpcf7-response-output.wpcf7-validation-errors').remove();
-
-	// Calling Document functions
-	fadeInOnScroll();
-	collapsableNav();
-	setFooterSpace();
-
-	$('.off-canvas-toggle, .site-overlay').on('click', function(e) {
-		e.preventDefault();
-		if ( $('body').hasClass('is-open') ) {
-			$('body').removeClass('is-open');
-			$(document).unbind("touchmove");
-		} else {
-			$('body').addClass('is-open');
-			$(document).bind("touchmove",function(e){
-				e.preventDefault();
-			});
-		}
-	});
-
-	$(window).smartresize(function(){
-		if ($(window).width() > 767) {
-			// Makes sure that the off canvas navigations open state dissapears when windows too big
-			$('body').removeClass('is-open');
-		}
-
-		setFooterSpace();
-
-	});
-
-	scrolls();
 });
-
-function scrolls(){
-	$(".link_to").click(function(e){
-		e.preventDefault();
-
-		var scroll 	= 0;
-		var id 		= $(this).attr('href');
-
-		if(id == "#blog"){
-			window.open("https://www.google.com");
-			return;
-		}
-
-	    $('html, body').animate({
-	        scrollTop: $(id).offset().top - 50
-	    }, 2000);
-	});
-}

@@ -1,5 +1,8 @@
 $(function(){
 	sizeMode();
+	IOS7BlurredHeader();
+	scrolls();
+
 	window.onload = loadScript;
 	
 	$(window).resize(function() {
@@ -11,10 +14,10 @@ $(function(){
 		var scrollPos = $(document).scrollTop();
 
 		if (scrollPos > headerOffset) {
-			// $('.top-nav .main-nav, .top-nav .logo').addClass('collapsed');
+			$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').addClass('collapsed');
 			$('#topnav').fadeIn();
 		} else {
-			// $('.top-nav .main-nav, .top-nav .logo').removeClass('collapsed');
+			$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').removeClass('collapsed');
 			$('#topnav').fadeOut();
 		}
 	});
@@ -26,24 +29,31 @@ function sizeMode(){
 	var ancho 	= $( window ).width();
 
 	if(ancho > 768){
-		alto -= 100
+		alto -= 95
 		div.css('height', alto);
 	}else{
 		alto -= 50
 		div.css('height', alto);
 	}
-
 }
 
 function gMaps(){
 	var mapOptions = {
-    	zoom: 8,
-    	center: new google.maps.LatLng(-34.397, 150.644),
+    	zoom: 16,
+    	center: new google.maps.LatLng(11.0121669,-74.7929595),
     	mapTypeId: google.maps.MapTypeId.ROADMAP,
-    	 scrollwheel: false,
+    	scrollwheel: false,
   	}
 
   	var map = new google.maps.Map(document.getElementById("maps"), mapOptions);
+
+  	// Creamos un marcador y lo posicionamos en el mapa
+	var marcador = new google.maps.Marker({
+  		position: new google.maps.LatLng(11.012203, -74.792069),
+  		map: map,
+  		title: 'Soluntech SAS',
+  		icon: 'assets/imgs/maps/marker60x90.png'
+	});
 }
 
 function loadScript() {
@@ -51,4 +61,52 @@ function loadScript() {
   	script.type = "text/javascript";
   	script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' + '&signed_in=true&callback=gMaps';
   	document.body.appendChild(script);
+}
+
+function scrollToTop(){
+	$('html, body').animate({ scrollTop: 0 }, 2000);
+}
+
+function scrolls(){
+	$(".link_to").click(function(e){
+		e.preventDefault();
+
+		var id 		= $(this).attr('href');
+		var scroll 	= $(id).offset().top - 50;
+
+		if(id == "#home"){
+			scroll = 0;
+		}else if(id == "#apps" || id == "#contact"){
+			scroll -= 5;
+		}
+
+		$('html, body').animate({
+			scrollTop: scroll
+		}, 2000);
+	});
+}
+
+function IOS7BlurredHeader(){
+	// var content 				= document.querySelector('.content');
+	// var duplicate 				= content.cloneNode(true);
+	// var contentBlurred 			= document.createElement('div');
+	// contentBlurred.className 	= 'content-blurred';
+	// contentBlurred.appendChild(duplicate);
+
+	// var header = document.querySelector('header');
+	// header.appendChild(contentBlurred);
+
+	// var contentWrapper = document.querySelector('.content-wrapper'), translation;
+
+	// contentWrapper.addEventListener('scroll',function(){
+	// 	translation = 'translate3d(0,' + (-this.scrollTop + 'px') + ',0)';
+	// 	duplicate.style['-webkit-transform'] = translation;
+	// 	duplicate.style['-moz-transform'] = translation;
+	// 	duplicate.style['transform'] = translation;
+	  
+	//   	console.log(duplicate);
+	// });
+
+	// // offset to demo blurring
+	// contentWrapper.scrollTop = 140;
 }
