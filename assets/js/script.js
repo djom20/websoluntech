@@ -1,7 +1,10 @@
 $(function(){
-	sizeMode();
-	IOS7BlurredHeader();
-	scrolls();
+
+	$(document).ready(function() {
+		resizeMode();
+		IOS7BlurredHeader();
+		scrolls();
+	});
 
 	window.onload = loadScript;
 	
@@ -23,18 +26,19 @@ $(function(){
 	});
 });
 
-function sizeMode(){
-	var div 	= $('#home');
+function resizeMode(){
 	var alto 	= $( window ).height();
 	var ancho 	= $( window ).width();
 
-	if(ancho > 768){
-		alto -= 95
-		div.css('height', alto);
-	}else{
-		alto -= 50
-		div.css('height', alto);
-	}
+	setTimeout(function(){
+		if(ancho > 768){
+			alto -= 95
+			$('#home').css('height', alto);
+		}else{
+			alto -= 70
+			$('#home').css('height', alto);
+		}
+	}, 50);
 }
 
 function gMaps(){
