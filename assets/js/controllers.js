@@ -3,7 +3,7 @@ angular.module('soluntech')
 .controller('HomeCtrl', ['$scope', '$http', '$location', '$content', '$sce',
     function($scope, $http, $location, $content, $sce) {
 
-           
+             scrolls();
             window.resizeMode();
 
             console.log($content);
