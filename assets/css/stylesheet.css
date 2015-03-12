@@ -383,8 +383,17 @@ section .breadcrumb {
 }
 
 #maps {
+	background-color: #fff;
 	border: 1px;
-	width: 100%;
 	height: 400px;
 	margin-top: 30px;
+	width: 100%;
+}
+
+#maps > img {
+	left: 40%;
+	padding: 15px;
+	position: relative;
+	top: 10%;
+	width: 22em;
 }

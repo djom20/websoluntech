@@ -6,15 +6,15 @@ $(function(){
 		videoBackground();
 	});
 
-	window.onload = loadScript;
+	// window.onload = loadScript;
 	
 	$(window).resize(function(){
 		resizeMode();
 	});
 
 	$(document).scroll( function(){
-		var headerOffset = 100;
-		var scrollPos = $(document).scrollTop();
+		var headerOffset 	= 100;
+		var scrollPos 		= $(document).scrollTop();
 
 		if (scrollPos > headerOffset){
 			$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').addClass('collapsed');

@@ -8,11 +8,8 @@ var gulp 				 = require('gulp'),
 
 var paths = {
     scripts: [
-        'herlpers/*.js',
-        'herlpers/*.json',
-        '*/**/*.html',
-        'css/*.css',
-        'js/*.js'
+        'assets/**/*',
+        '*/**/*.html'
     ]
 };
 
