@@ -6,7 +6,7 @@ $(function(){
 		videoBackground();
 	});
 
-	// window.onload = loadScript;
+	window.onload = loadScript;
 	
 	$(window).resize(function(){
 		resizeMode();
