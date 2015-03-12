@@ -53,62 +53,37 @@
 		<h1 class="text-center sanspro">Como trabajamos</h1>
 		<div id="timeline" class="col-md-12">
 			<div class="timeline col-md-6">
-				<h4 class="step-tlr">Titulo 1</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<h4 >{{content.step1.content.title  || 'titulo 1'}}</h4>
+				<p  ng-bind-html="content.step1.content.content">
+					{{content.step1.content.content}} 
 				</p>
 				<span class="timeline-number">1</span>
 			</div>
 			<div class="timeline col-md-6">
-				<h4>Titulo 2</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<h4 >{{content.step2.content.title  || 'titulo 2'}}</h4>
+				<p  ng-bind-html="content.step2.content.content">
+					{{content.step2.content.content}} 
 				</p>
 				<span class="timeline-number">2</span>
 			</div>
 			<div class="timeline col-md-6">
-				<h4>Titulo 3</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<h4 >{{content.step3.content.title  || 'titulo 3'}}</h4>
+				<p  ng-bind-html="content.step3.content.content">
+					{{content.step3.content.content}} 
 				</p>
 				<span class="timeline-number">3</span>
 			</div>
 			<div class="timeline col-md-6">
-				<h4>Titulo 4</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<h4 >{{content.step4.content.title  || 'titulo 4'}}</h4>
+				<p  ng-bind-html="content.step4.content.content">
+					{{content.step4.content.content}} 
 				</p>
 				<span class="timeline-number">4</span>
 			</div>
 			<div class="timeline col-md-6">
-				<h4>Titulo 5</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<h4 >{{content.step5.content.title  || 'titulo 5'}}</h4>
+				<p  ng-bind-html="content.step5.content.content">
+					{{content.step5.content.content}} 
 				</p>
 				<span class="timeline-number">5</span>
 			</div>
@@ -118,21 +93,10 @@
 
 <section id="apps" class="row bgGrey">
 	<div class="container">
-		<h1 class="text-center sanspro">Nuestras APPS</h1>
+		<h1 class="text-center sanspro">{{content.apps.content.title}}</h1>
 		<div class="col-md-8" style="margin: 0 auto; float: none;">
-			<div class="row">
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<img src="assets/imgs/partners/logo1.png" class="partner">
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<img src="assets/imgs/partners/logo2.png" class="partner">
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<img src="assets/imgs/partners/logo3.png" class="partner">
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<img src="assets/imgs/partners/logo4.png" class="partner">
-				</div>
+			<div class="row" ng-bind-html="content.apps.content.content">
+				{{content.apps.content.content}}
 			</div>
 		</div>
 	</div>
@@ -140,21 +104,10 @@
 
 <section id="clients" class="row">
 	<div class="container">
-		<h1 class="text-center sanspro">Clientes</h1>
+		<h1 class="text-center sanspro">{{content.clientes.content.title}}</h1>
 		<div class="col-md-8" style="margin: 0 auto; float: none;">
-			<div class="row">
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<img src="assets/imgs/partners/logo1.png" class="partner">
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<img src="assets/imgs/partners/logo2.png" class="partner">
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<img src="assets/imgs/partners/logo3.png" class="partner">
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<img src="assets/imgs/partners/logo4.png" class="partner">
-				</div>
+			<div class="row" ng-bind-html="content.clientes.content.content">
+				{{content.clientes.content.content}}
 			</div>
 		</div>
 	</div>
@@ -182,19 +135,9 @@
 			</form>
 		</div>				
 		<div class="col-md-5 info">
-			<h3>Soluntech SAS</h3>
-			<p>
-			   	<span class="group">
-			   		<span>Direccion: Via 40 # 73 - 290. Oficina 414.</span>
-			   		<span>Centro de Negocios Mix 40.</span>
-			   		<span>Barranquilla, Colombia.</span>
-			   	</span>
-				<span class="group">
-					<span>Tel: +57 (5) 368 1722</span>
-					<span>Cel: +57 320 517 9361</span>
-					<span>Fax: +57 5 319 7601</span>
-				</span>
-				<span>Email: <a href="mailto:info@soluntech.com">info@soluntech.com</a></span>
+			<h3>{{content.contacto.content.title}}</h3>
+			<p ng-bind-html="content.contacto.content.content">
+			   {{content.contacto.content.content}}
 			</p>
 		</div>
 
