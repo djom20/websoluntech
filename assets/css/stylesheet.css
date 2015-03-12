@@ -104,7 +104,7 @@ h1 {
 	display: none;
 }
 
-/* ALL */
+/* HERLPERS */
 .navbar-default{
 	background: rgba(255,255,255,.85);
 	border: 0;
@@ -251,6 +251,10 @@ section .breadcrumb {
 	-moz-backface-visibility:hidden;
 	-ms-backface-visibility:hidden;
 	backface-visibility:hidden;
+}
+
+.whiteborder{
+	border-color:white;
 }
 
 /* HOME */
