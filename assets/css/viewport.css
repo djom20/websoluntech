@@ -118,6 +118,9 @@
     #contact > .container .info {
     	padding-top: 50px;
     }
+    #apps p, #clients p{
+		  text-align: center !important;
+	}
 }
 
 @media screen and (max-width: 990px){
@@ -127,6 +130,9 @@
 
     #contact > .container .info {
 		float: left;
+	}
+	#apps p, #clients p{
+		  text-align: center !important;
 	}
 }
 
@@ -176,5 +182,9 @@
 
 	#contact > .container form > div {
 		padding-bottom: 30px;
+	}
+
+	#apps p, #clients p{
+		  text-align: center !important;
 	}
 }
