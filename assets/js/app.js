@@ -1,9 +1,6 @@
-var App = angular.module('App', [
-    'ngRoute',
-    'Controllers'
-]);
+var App = angular.module('App', ['ngRoute'])
 
-App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
+.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
     function($routeProvider, $httpProvider, $locationProvider) {
         //Enable cross domain calls
         $httpProvider.defaults.useXDomain = true;
