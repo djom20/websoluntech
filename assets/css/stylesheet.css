@@ -343,7 +343,7 @@ section .breadcrumb {
 	/* Reset */
 	border: none;
 	box-shadow: none;
-	color:#444;
+	color:#fff;
 	resize:none;
 	font-weight: normal;
 	padding: 20px 0;
@@ -387,12 +387,12 @@ section .breadcrumb {
 	border: 1px;
 	height: 400px;
 	margin-top: 30px;
-	width: 100%;
+	position: relative;
 }
 
-#maps > img {
-	left: 40%;
+#maps .container > img {
 	padding: 15px;
+	padding-top: 60px;
 	position: relative;
 	top: 10%;
 	width: 22em;

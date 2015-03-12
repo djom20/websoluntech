@@ -179,18 +179,18 @@
 			<h3>Enviar un mensaje</h3>
 			<form action="">
 				<div class="form-group">
-				    <label for=""><input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre"></label>
+				    <label><input ng-model="formContact.name" type="text" class="form-control" placeholder="Nombre"></label>
 			  	</div>
 			  	<div class="form-group">
-				    <label for=""><input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email"></label>
+				    <label><input ng-model="formContact.email" type="email" class="form-control" placeholder="Email"></label>
 			  	</div>
 			  	<div class="form-group">
-				    <label for=""><input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Telefono"></label>
+				    <label><input ng-model="formContact.tel" type="tel" class="form-control" placeholder="Telefono"></label>
 			  	</div>
 			  	<div class="form-group">
-				    <label for=""><textarea class="form-control" cols="30" rows="3" placeholder="Mensaje"></textarea></label>
+				    <label><textarea ng-model="formContact.message" class="form-control" cols="30" rows="3" placeholder="Mensaje"></textarea></label>
 			  	</div>
-			  	<button type="submit" class="btn btn-grey pull-right whiteborder">Enviar</button>
+			  	<button type="button" ng-click="sendEmail();" class="btn btn-grey pull-right whiteborder">Enviar</button>
 			</form>
 		</div>				
 		<div class="col-md-5 info">
@@ -211,7 +211,9 @@
 		</div>
 	</div>
 	<div id="maps">
-		<img src="assets/imgs/maps/google-maps-logo.jpg" alt="">
+		<div class="container text-center">
+			<img src="assets/imgs/maps/google-maps-logo.jpg" alt="">
+		</div>
 	</div>
 </section>
 

@@ -12,10 +12,10 @@
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    $_REQUEST['name'] 		= "Jonathan Olier";
-	$_REQUEST['email'] 		= "jolier@soluntech.com";
-	$_REQUEST['tel'] 		= "3177963884";
-	$_REQUEST['message'] 	= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maiores, magnam illo qui, quidem earum accusamus sapiente molestias adipisci vel vero molestiae facilis error provident doloremque eaque quisquam quaerat eligendi.";
+ //    $_REQUEST['name'] 		= "Jonathan Olier";
+	// $_REQUEST['email'] 		= "jolier@soluntech.com";
+	// $_REQUEST['tel'] 		= "3177963884";
+	// $_REQUEST['message'] 	= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maiores, magnam illo qui, quidem earum accusamus sapiente molestias adipisci vel vero molestiae facilis error provident doloremque eaque quisquam quaerat eligendi.";
 
 	$table 	= "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"max-width: 600px; margin: auto;\">
 	                <tbody>
@@ -152,8 +152,7 @@
 			</html>"; 
 
 	if(mail('jolier@soluntech.com', 'Send', $html, $headers)){
-		echo 'Se envio el correo correctamente.';
-	}else{
-		// echo 'No se envio el correo';
+		echo array('_code' => 200, '_response' => 'Se envio el correo correctamente.');
+	}else{ // echo 'No se envio el correo';
 		echo $html;
 	}
