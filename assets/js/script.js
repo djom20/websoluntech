@@ -48,17 +48,17 @@ function resizeMode(){
 	var alto 	= $( window ).height();
 	var ancho 	= $( window ).width();
 
-	$('#videos').videobackground('resize');
+	// $('#videos').videobackground('resize');
 
 	setTimeout(function(){
 		if(ancho > 768){
-			alto -= 95
-			$('#home, #videos, #videos>video').css('height', alto);
+			$('#videos, #videos>video').css('height', alto);
+			$('#home').css('height', alto - 95);
 		}else{
-			alto -= 70
-			$('#home, #videos, #videos>video').css('height', alto);
+			$('#videos, #videos>video').css('height', alto);
+			$('#home').css('height', alto - 70);
 		}
-	}, 50);
+	}, 60);
 }
 
 function gMaps(){
