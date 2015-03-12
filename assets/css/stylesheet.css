@@ -106,6 +106,10 @@ h1 {
 }
 
 /* HERLPERS */
+#SkypeButton_Call_soluntechSkype_1_paraElement img {
+	margin-left: 0 !important;
+}
+
 .navbar-default{
 	background: rgba(255,255,255,.85);
 	border: 0;
