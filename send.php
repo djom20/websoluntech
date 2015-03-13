@@ -190,7 +190,7 @@ error_reporting(-1);
 	}
 
 
-
+echo $_SERVER["REQUEST_METHOD"];
 
 	switch  ($_SERVER["REQUEST_METHOD"])
 	{
