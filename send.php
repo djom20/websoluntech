@@ -12,7 +12,7 @@ error_reporting(-1);
 
 	function _Mail(){
 
-		if($_SESSION["csrf"] != $_POST["csrf"])
+		if((!isset($_SESSION["csrf"])) || ($_SESSION["csrf"] != $_POST["csrf"]))
 		{
 			http_response_code(500);  	
 	        echo json_encode(array('_code' => 500, '_response' => 'Petición no válida'));  		
