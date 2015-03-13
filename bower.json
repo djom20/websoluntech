@@ -6,6 +6,7 @@
     "angular-route" : "latest",
     "bootstrap" : "latest",
     "jquery" : "latest",
-    "less" : "latest"
+    "less" : "latest",
+    "animate-css" : "latest"
   }
 }

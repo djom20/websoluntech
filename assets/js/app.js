@@ -124,7 +124,7 @@ function gMaps(){
         position: new google.maps.LatLng(11.012203, -74.792069),
         map: map,
         title: 'Soluntech SAS',
-        icon: 'assets/imgs/maps/marker60x90.png'
+        icon: 'assets/imgs/marker.png'
     });
 }
 
@@ -152,7 +152,7 @@ function scrollToTop(){
 }
 
 function scrolls(){
-    $(document).on('click', '.link_to', function(e){
+    $('body').on('click', '.link_to', function(e){
         e.preventDefault();
 
         var id      = $(this).attr('href');
@@ -164,9 +164,20 @@ function scrolls(){
             scroll -= 5;
         }
 
+          var media = $("body").height();
+          var maxTime = 2000;
+          
+          var offset = $(id).offset().top;
+          
+          console.log(offset)
+          
+          var time = (offset * maxTime) / media;
+          
+          console.log(time, 'time');
+
         $('html, body').animate({
             scrollTop: scroll
-        }, 2000);
+        }, time);
     });
 }
 
