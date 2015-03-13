@@ -98,12 +98,19 @@ function scrolls(){
 
 		var id 		= $(this).attr('href');
 		var scroll 	= $(id).offset().top - 50;
+		if(id == "#home"){ scroll = 0; }
 
-		if(id == "#home"){
-			scroll = 0;
-		}else if(id == "#apps" || id == "#contact"){
-			scroll -= 5;
+		if($( window ).width() > 768){
+			if(id == "#apps" || id == "#contact"){
+				scroll -= 5;
+			}
+		}else{
+			if(id != "#home"){
+				scroll -= 20;
+			}
 		}
+
+		if(id != "#home"){ $('.navbar-default .navbar-toggle').click(); }
 
 		$('html, body').animate({
 			scrollTop: scroll
