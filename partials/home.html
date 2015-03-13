@@ -1,5 +1,6 @@
-<section id="home" class="row bgGrey">
+<section id="home" class="row bgGrey nopaddingtop">
 	<div class="container">
+	<br>
 		<h1 class="text-center sanspro">
 			<span class="light roboto">
 				Aplicaciones
@@ -13,10 +14,14 @@
 			<li>Diseño</li>
 			<li>Desarrollo</li>
 		</ol>
+		<div class="visible-lg">
+		  <br>
+		</div>
 		<br>
-		<br>
-		<a href="#contact" class="btn btn-grey big whiteborder tocenter link_to">Contáctanos Ahora</a>
+		<a href="#contact" class="btn btn-grey big whiteborder tocenter link_to ">Contáctanos Ahora</a>
+			
 	</div>
+
 </section>
 
 <section id="development" class="row">
@@ -37,7 +42,7 @@
 
 <section id="solutions" class="row bgGrey withBg">
 	<div class="container">
-		<h1 class="text-center sanspro">{{content.soluciones.content.title}}</h1>
+		<h1 class="text-center sanspro tlm">{{content.soluciones.content.title}}</h1>
 		<p class="readerp" ng-bind-html="content.soluciones.content.content">
 			content.soluciones.content.content
 		</p>
@@ -134,7 +139,7 @@
 			  	<div class="form-group">
 				    <label for=""><textarea class="form-control" cols="30" rows="3" placeholder="Mensaje"></textarea></label>
 			  	</div>
-			  	<button type="submit" class="btn btn-grey whiteborder pull-right">Enviar</button>
+			  	<button type="submit" class="btn col-xs-12 btn-grey whiteborder pull-right">Enviar</button>
 			</form>
 		</div>				
 		<div class="col-md-5 info">

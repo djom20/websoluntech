@@ -152,7 +152,7 @@ function scrollToTop(){
 }
 
 function scrolls(){
-    $(".link_to").click(function(e){
+    $(document).on('click', '.link_to', function(e){
         e.preventDefault();
 
         var id      = $(this).attr('href');

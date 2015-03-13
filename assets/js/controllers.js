@@ -3,7 +3,6 @@ angular.module('soluntech')
 .controller('HomeCtrl', ['$scope', '$http', '$location', '$content', '$sce',
     function($scope, $http, $location, $content, $sce) {
 
-             scrolls();
             window.resizeMode();
 
             console.log($content);
@@ -151,7 +150,7 @@ function contentApi($http) {
 
     this.get = function() {
     	var uri = this.uri;
-    	this.reset;
+    	this.reset();
         return (uri) ? $http.get(this.base_url + uri) : false;
     }
 
