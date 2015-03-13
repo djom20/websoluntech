@@ -186,7 +186,7 @@ error_reporting(-1);
 
 
 	function genCsrfToken(){
-		 return   hash(md5(time() . microtime()) , '$_S0lunt3ch;');
+		 return   hash("sha512",md5(time() . microtime()) . '$_S0lunt3ch;');
 	}
 
 
