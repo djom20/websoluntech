@@ -62,11 +62,15 @@ App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
         IOS7BlurredHeader();
         scrolls();
 
-           $(document).scroll( function() {
-        var headerOffset = 100;
-        var scrollPos = $(document).scrollTop();
+           $(document).scroll( function(){
+        var headerOffset    = 0;
+        var scrollPos       = $(document).scrollTop();
+        var ancho           = $( window ).width();
 
-        if (scrollPos > headerOffset) {
+        if(ancho > 768){ headerOffset   = 100; }
+        else{ headerOffset  = 80; }
+
+        if (scrollPos > headerOffset){
             $('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').addClass('collapsed');
             $('#topnav').fadeIn();
         } else {
@@ -134,11 +138,20 @@ function scrolls(){
         var id      = $(this).attr('href');
         var scroll  = $(id).offset().top - 50;
 
-        if(id == "#home"){
-            scroll = 0;
-        }else if(id == "#apps" || id == "#contact"){
-            scroll -= 5;
+        if(id == "#home"){ scroll = 0; }
+
+        if($( window ).width() > 768){
+            if(id == "#apps" || id == "#contact"){
+                scroll -= 5;
+            }
+        }else{
+            if(id != "#home"){
+                scroll -= 20;
+            }
         }
+
+        if(id != "#home"){ $('.navbar-default .navbar-toggle').click(); }
+
 
           var media = $("body").height();
           var maxTime = 2000;
