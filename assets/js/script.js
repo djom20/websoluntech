@@ -13,18 +13,19 @@ $(function(){
 	});
 
 	$(document).scroll( function(){
-		var headerOffset 	= 100;
+		var headerOffset 	= 0;
 		var scrollPos 		= $(document).scrollTop();
 		var ancho 			= $( window ).width();
 
-		if(ancho > 768){
-			if (scrollPos > headerOffset){
-				$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').addClass('collapsed');
-				$('#topnav').fadeIn();
-			} else {
-				$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').removeClass('collapsed');
-				$('#topnav').fadeOut();
-			}
+		if(ancho > 768){ headerOffset 	= 100; }
+		else{ headerOffset 	= 80; }
+
+		if (scrollPos > headerOffset){
+			$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').addClass('collapsed');
+			$('#topnav').fadeIn();
+		} else {
+			$('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').removeClass('collapsed');
+			$('#topnav').fadeOut();
 		}
 	});
 });
