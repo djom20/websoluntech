@@ -60,7 +60,7 @@ function resizeMode(){
 			$('#videos, #videos>video').css('height', alto);
 			$('#home').css('height', alto - 70);
 		}
-	}, 60);
+	}, 80);
 }
 
 function gMaps(){
