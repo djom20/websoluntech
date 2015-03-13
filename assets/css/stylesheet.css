@@ -111,8 +111,7 @@ h1 {
 }
 
 .navbar-default{
-	/*background: rgba(255,255,255,.85);*/
-	background: #dfe1e4 !important;
+	
 	border: 0;
 	box-shadow: none;
 }

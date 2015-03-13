@@ -7,6 +7,7 @@
     "bootstrap" : "latest",
     "jquery" : "latest",
     "less" : "latest",
-    "animate-css" : "latest"
+    "animate-css" : "latest",
+    "angular-elastic" : "latest"
   }
 }

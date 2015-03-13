@@ -1,5 +1,5 @@
 <?php
-ob_start();
+session_start();
 error_reporting(-1);
 	/**
 	 * Description of send.php
@@ -10,9 +10,9 @@ error_reporting(-1);
 	 * @author djom202
 	 */
 
-	function Mail(){
+	function _Mail(){
 
-		if($_SESSION["csrf"] != $_POST["csrf"])
+		if((!isset($_SESSION["csrf"])) || ($_SESSION["csrf"] != $_POST["csrf"]))
 		{
 			http_response_code(500);  	
 	        echo json_encode(array('_code' => 500, '_response' => 'Petición no válida'));  		
@@ -162,7 +162,7 @@ error_reporting(-1);
 				</body>
 			</html>"; 
 
-  if(mail('jolier@soluntech.com', 'Send', $html, $headers);)
+  if(mail('info@soluntech.com', 'Contacto Cliente - Soluntech.com', $html, $headers))
   {
 	http_response_code(200);
   	echo json_encode(array('_code' => 200, '_response' => 'Se envio el correo correctamente.'));
@@ -186,21 +186,21 @@ error_reporting(-1);
 
 
 	function genCsrfToken(){
-		 return   hash(md5(time() . microtime()) . '$_S0lunt3ch;');
+		 return   hash("sha512",md5(time() . microtime()) . '$_S0lunt3ch;');
 	}
-
-
 
 
 	switch  ($_SERVER["REQUEST_METHOD"])
 	{
 
 		case "GET":
-				echo genCsrfToken();
+		  		$csrf = genCsrfToken();
+		        $_SESSION["csrf"] = $csrf;
+				echo $csrf;
 		break;
 
 		case "POST":
-			  Mail();
+			  _Mail();
 		break;
 
 	}

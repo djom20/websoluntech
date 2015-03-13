@@ -1,5 +1,6 @@
 var App = angular.module('soluntech', [
-    'ngRoute'
+    'ngRoute', 
+    'monospaced.elastic'
 ]);
 
 App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
