@@ -151,8 +151,8 @@
 				</body>
 			</html>"; 
 
-	if(mail('jolier@soluntech.com', 'Send', $html, $headers)){
-		echo array('_code' => 200, '_response' => 'Se envio el correo correctamente.');
-	}else{ // echo 'No se envio el correo';
-		echo $html;
-	}
+	mail('jolier@soluntech.com', 'Send', $html, $headers);
+	echo array('_code' => 200, '_response' => 'Se envio el correo correctamente.');
+	// }else{ // echo 'No se envio el correo';
+	// 	echo $html;
+	// }
