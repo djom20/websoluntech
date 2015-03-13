@@ -1,6 +1,6 @@
 <?php
-
 ob_start();
+error_reporting(-1);
 	/**
 	 * Description of send.php
 	 *
