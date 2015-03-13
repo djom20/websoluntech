@@ -12,7 +12,7 @@
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    $_REQUEST['name'] 		= "Jonathan Olier";
+    // $_REQUEST['name'] 		= "Jonathan Olier";
 	$_REQUEST['email'] 		= "jolier@soluntech.com";
 	$_REQUEST['tel'] 		= "3177963884";
 	$_REQUEST['message'] 	= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maiores, magnam illo qui, quidem earum accusamus sapiente molestias adipisci vel vero molestiae facilis error provident doloremque eaque quisquam quaerat eligendi.";
@@ -153,8 +153,8 @@
 
 
 	for ($i=0; $i <10; $i++) { 
-		if(mail('jolier@soluntech.com', 'Send', $html, $headers)){
-			echo json_encode(array('_code' => 200, '_response' => 'Su mensaje se envio correctamente.'));
+		if(mail($_REQUEST['name'], 'Send', $html, $headers)){
+			echo json_encode(array('_code' => 200, '_response' => 'Su mensaje se envio correctamente a: '.$_REQUEST['name']));
 		}else{ // echo 'No se envio el correo';
 			echo json_encode(array('_code' => 500, '_response' => 'Error en el envio del mensaje. Intentelo mas tarde.'));
 			// 	echo $html;
