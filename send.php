@@ -190,13 +190,13 @@ error_reporting(-1);
 	}
 
 
-echo $_SERVER["REQUEST_METHOD"];
-
 	switch  ($_SERVER["REQUEST_METHOD"])
 	{
 
 		case "GET":
-				echo genCsrfToken();
+		  		$csrf = genCsrfToken();
+		        $_SESSION["csrf"] = $csrf;
+				echo $csrf;
 		break;
 
 		case "POST":
