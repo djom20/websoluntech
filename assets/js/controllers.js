@@ -5,6 +5,11 @@ angular.module('soluntech')
             window.resizeMode();     
             console.log($content);
 
+
+			$(window).resize(function(){
+					 $gmaps.init($scope.contacto);
+			});
+
            $content
            .posts()
            .get()
@@ -22,9 +27,6 @@ angular.module('soluntech')
             	       	      	  "title" : rs[x].title,
             	       	      	  "content" : rs[x]
             	       	      };
-
-            	       	      $scope.content["customDesign"].content.content
-            	       	      .replace()
 
             	       	      $scope.content["customDesign"].content.content = $sce.trustAsHtml($scope.content["customDesign"].content.content);
             	       	   break;
@@ -176,6 +178,8 @@ function initGmaps() {
     
     this.init = function(data){ 
 
+    	      console.log('initializing gmaps');
+
 				var mapOptions = {
 					zoom: 16,
 					center: new google.maps.LatLng(11.0121669,-74.7929595),
@@ -201,6 +205,8 @@ function initGmaps() {
 				google.maps.event.addListener(marcador, 'click', function() {
 					infowindow.open(map,marcador);
 				});
+
+
 
     
      }
