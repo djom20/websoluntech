@@ -118,6 +118,9 @@
     #contact > .container .info {
     	padding-top: 50px;
     }
+    #apps p, #clients p{
+		  text-align: center !important;
+	}
 }
 
 @media screen and (max-width: 990px){
@@ -127,6 +130,9 @@
 
     #contact > .container .info {
 		float: left;
+	}
+	#apps p, #clients p{
+		  text-align: center !important;
 	}
 }
 
@@ -141,21 +147,21 @@
 	}
 
 	.navbar-nav>li>a {
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
 	}
 
 	.navbar > .container .navbar-collapse ul>li:last-of-type {
-		margin: initial;
-		padding: 0px;
-		width: initial;
+		margin: initial !important;
+		padding: 0px !important;
+		width: initial !important;
 	}
 
 	.navbar > .container .navbar-collapse ul>li:last-of-type>a {
-		margin: initial;
-		padding: 10px 15px;
-		border: none;
-		text-align: left;
+		margin: initial !important;
+		padding: 10px 15px !important;
+		border: none !important;
+		text-align: left !important;
 	}
 
 	.navbar > .container .navbar-brand {
@@ -199,5 +205,9 @@
 
 	#contact > .container form > div {
 		padding-bottom: 30px;
+	}
+
+	#apps p, #clients p{
+		  text-align: center !important;
 	}
 }

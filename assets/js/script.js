@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(function(){
 
 	$(document).ready(function(){
@@ -118,3 +119,5 @@ function scrolls(){
 		}, 2000);
 	});
 }
+=======
+>>>>>>> fc31ca145a043656f12e4438632387156f5bcd1a

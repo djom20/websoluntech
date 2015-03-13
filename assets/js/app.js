@@ -1,5 +1,8 @@
-var App = angular.module('App', ['ngRoute'])
-.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
+var App = angular.module('soluntech', [
+    'ngRoute'
+]);
+
+App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
     function($routeProvider, $httpProvider, $locationProvider) {
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
@@ -44,10 +47,10 @@ var App = angular.module('App', ['ngRoute'])
         $routeProvider.
             when('/', {
                 templateUrl: 'partials/home.html',
-                controller: 'HomeCtrl'
+                controller: 'homeCtrl'
             }).
             otherwise({
-                redirectTo: '/'
+                redireTo: '/'
             });
 
             //$locationProvider.html5Mode(true);
@@ -55,4 +58,126 @@ var App = angular.module('App', ['ngRoute'])
 ])
 .run(function($rootScope){
 
+         resizeMode();
+        IOS7BlurredHeader();
+        scrolls();
+
+           $(document).scroll( function() {
+        var headerOffset = 100;
+        var scrollPos = $(document).scrollTop();
+
+        if (scrollPos > headerOffset) {
+            $('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').addClass('collapsed');
+            $('#topnav').fadeIn();
+        } else {
+            $('.navbar > .container .navbar-collapse ul, .navbar>.container .navbar-brand').removeClass('collapsed');
+            $('#topnav').fadeOut();
+        }
+    });
+
 });
+
+
+
+ window.onload = loadScript;
+    
+    $(window).resize(function() {
+        resizeMode();
+    });
+
+ 
+
+
+window.resizeMode = function(){
+    var alto    = $( window ).height();
+    var ancho   = $( window ).width();
+
+    setTimeout(function(){
+        if(ancho > 768){
+            alto -= 95
+            $('#home').css('height', alto);
+        }else{
+            alto -= 70
+            $('#home').css('height', alto);
+        }
+    }, 50);
+}
+
+
+function loadScript() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' + '&signed_in=true&callback=gMaps';
+    document.body.appendChild(script);
+}
+
+function scrollToTop(){
+
+    var media = $("body").height();
+    var maxTime = 1000;
+
+    var offset = $("#topnav").offset().top;
+
+    console.log(offset)
+
+    var time = (offset * maxTime) / media;
+
+    console.log(time, 'time');
+
+    $('html, body').animate({ scrollTop: 0 }, time);
+}
+
+function scrolls(){
+    $('body').on('click', '.link_to', function(e){
+        e.preventDefault();
+
+        var id      = $(this).attr('href');
+        var scroll  = $(id).offset().top - 50;
+
+        if(id == "#home"){
+            scroll = 0;
+        }else if(id == "#apps" || id == "#contact"){
+            scroll -= 5;
+        }
+
+          var media = $("body").height();
+          var maxTime = 2000;
+          
+          var offset = $(id).offset().top;
+          
+          console.log(offset)
+          
+          var time = (offset * maxTime) / media;
+          
+          console.log(time, 'time');
+
+        $('html, body').animate({
+            scrollTop: scroll
+        }, time);
+    });
+}
+
+function IOS7BlurredHeader(){
+    // var content              = document.querySelector('.content');
+    // var duplicate                = content.cloneNode(true);
+    // var contentBlurred           = document.createElement('div');
+    // contentBlurred.className     = 'content-blurred';
+    // contentBlurred.appendChild(duplicate);
+
+    // var header = document.querySelector('header');
+    // header.appendChild(contentBlurred);
+
+    // var contentWrapper = document.querySelector('.content-wrapper'), translation;
+
+    // contentWrapper.addEventListener('scroll',function(){
+    //  translation = 'translate3d(0,' + (-this.scrollTop + 'px') + ',0)';
+    //  duplicate.style['-webkit-transform'] = translation;
+    //  duplicate.style['-moz-transform'] = translation;
+    //  duplicate.style['transform'] = translation;
+      
+    //      console.log(duplicate);
+    // });
+
+    // // offset to demo blurring
+    // contentWrapper.scrollTop = 140;
+}

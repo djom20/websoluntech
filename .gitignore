@@ -2,9 +2,9 @@
 node_modules/
 web/.htaccess
 keys/
-cyz/
 sftp-config.json
 config.js
+libs/
 *.zip
 *.dll
 *.pem

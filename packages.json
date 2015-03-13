@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "title": "Soluntech Web",
     "name": "Soluntech-web",
     "description": "",
@@ -23,4 +24,17 @@
         "gulp-connect" : "latest",
         "connect-history-api-fallback" : "latest"
     }
+=======
+  "title": "Live Injector",
+  "name": "Live Injector",
+  "description": "Inyector de Scripts y Estilos en tiempo real",
+  "version": "0.0.1",
+  "author": {
+    "name": "Soluntech",
+    "email": "info@soluntech.com"
+  },
+  "dependencies" : {
+     "gulp" : "latest"
+  } 
+>>>>>>> fc31ca145a043656f12e4438632387156f5bcd1a
 }
