@@ -1,4 +1,6 @@
 <?php
+ob_start();
+error_reporting(-1);
 	/**
 	 * Description of send.php
 	 *
@@ -8,14 +10,23 @@
 	 * @author djom202
 	 */
 
-	$headers = "From: " . strip_tags('no-reply@soluntech.com') . "\r\n";
+	function Mail(){
+
+		if($_SESSION["csrf"] != $_POST["csrf"])
+		{
+			http_response_code(500);  	
+	        echo json_encode(array('_code' => 500, '_response' => 'Petición no válida'));  		
+			die;
+		}
+
+   $headers = "From: " . strip_tags('no-reply@soluntech.com') . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
- //    $_REQUEST['name'] 		= "Jonathan Olier";
-	// $_REQUEST['email'] 		= "jolier@soluntech.com";
-	// $_REQUEST['tel'] 		= "3177963884";
-	// $_REQUEST['message'] 	= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maiores, magnam illo qui, quidem earum accusamus sapiente molestias adipisci vel vero molestiae facilis error provident doloremque eaque quisquam quaerat eligendi.";
+ //    $_POST['name'] 		= "Jonathan Olier";
+	// $_POST['email'] 		= "jolier@soluntech.com";
+	// $_POST['tel'] 		= "3177963884";
+	// $_POST['message'] 	= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maiores, magnam illo qui, quidem earum accusamus sapiente molestias adipisci vel vero molestiae facilis error provident doloremque eaque quisquam quaerat eligendi.";
 
 	$table 	= "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"max-width: 600px; margin: auto;\">
 	                <tbody>
@@ -28,7 +39,7 @@
 					                            <p> Nombre </p>
 					                        </td>
 					                        <td style=\" padding-top: 20px; text-align: right; padding-right: 20px;\">
-					                            ". $_REQUEST['name'] ."
+					                            ". $_POST['name'] ."
 					                        </td>
 	                    				</tr>
 	                    				<tr>
@@ -36,7 +47,7 @@
 					                            <p> Email </p>
 					                        </td>
 					                        <td style=\"text-align: right; padding-right: 20px;\">
-					                            ". $_REQUEST['email'] ."
+					                            ". $_POST['email'] ."
 					                        </td>
 	                    				</tr>
 	                    				<tr>
@@ -44,7 +55,7 @@
 					                            <p> Telefono </p>
 					                        </td>
 					                        <td style=\"text-align: right; padding-right: 20px;\">
-					                            ". $_REQUEST['tel'] ."
+					                            ". $_POST['tel'] ."
 					                        </td>
 	                    				</tr>
 				                    </tbody>
@@ -62,7 +73,7 @@
 	                    				</tr>
 	                    				<tr>
 					                        <td style=\"text-align: left; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;\">
-					                            ". $_REQUEST['message'] ."
+					                            ". $_POST['message'] ."
 					                        </td>
 	                    				</tr>
 				                    </tbody>
@@ -151,9 +162,46 @@
 				</body>
 			</html>"; 
 
-	if(mail('jolier@soluntech.com', 'Send', $html, $headers)){
-		echo json_encode(array('_code' => 200, '_response' => 'Su mensaje se envio correctamente.'));
-	}else{ // echo 'No se envio el correo';
-		echo json_encode(array('_code' => 500, '_response' => 'Error en el envio del mensaje. Intentelo mas tarde.'));
-		// 	echo $html;
+  if(mail('jolier@soluntech.com', 'Send', $html, $headers);)
+  {
+	http_response_code(200);
+  	echo json_encode(array('_code' => 200, '_response' => 'Se envio el correo correctamente.'));
+  }
+  else
+  {
+	http_response_code(500);  	
+	echo json_encode(array('_code' => 500, '_response' => 'Error Interno no se pudo enviar email'));  		
+  }
+  
+	
+	
+
+	
+	// }else{ // echo 'No se envio el correo';
+	// 	echo $html;
+	// }
+
 	}
+
+
+
+	function genCsrfToken(){
+		 return   hash(md5(time() . microtime()) . '$_S0lunt3ch;');
+	}
+
+
+
+
+	switch  ($_SERVER["REQUEST_METHOD"])
+	{
+
+		case "GET":
+				echo genCsrfToken();
+		break;
+
+		case "POST":
+			  Mail();
+		break;
+
+	}
+
