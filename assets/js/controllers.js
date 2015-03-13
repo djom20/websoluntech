@@ -137,10 +137,10 @@ $scope.formContact = {
             $http.post(
                                                                        "send.php", $scope.formContact
             ).success(function (data) {
-                                                // if(data._code === 200) {
+                                                if(data._code === 200) {
                                                $scope.clearForm();
-                        // alert(data._response);
-                // }
+                }
+                        alert(data._response);
             });
         };
  
