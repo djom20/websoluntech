@@ -1,10 +1,9 @@
  
 angular.module('soluntech')
-.controller('HomeCtrl', ['$scope', '$http', '$location', '$content', '$sce',
-    function($scope, $http, $location, $content, $sce) {
+.controller('homeCtrl', ['$scope', '$http', '$location', '$content', '$sce', '$gmaps',
+    function($scope, $http, $location, $content, $sce, $gmaps) {
 
-            window.resizeMode();
-
+            window.resizeMode();     
             console.log($content);
 
            $content
@@ -58,6 +57,7 @@ angular.module('soluntech')
             	       	      	  "content" : rs[x]
             	       	      };
 
+            	       	      $scope.contacto = rs[x].content;
             	       	      $scope.content["contacto"].content.content = $sce.trustAsHtml($scope.content["contacto"].content.content);
 
             	       	   break;	
@@ -115,14 +115,59 @@ angular.module('soluntech')
             	       }
 
 
+
+            	       $gmaps.init($scope.contacto || "Texto");
+
             	       console.log($scope.content);
 
 
            });
 
+
+		 	
+
     }]
 );
 
+
+
+
+function initGmaps() {
+    
+    this.init = function(data){ 
+
+				var mapOptions = {
+					zoom: 16,
+					center: new google.maps.LatLng(11.0121669,-74.7929595),
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					scrollwheel: false,
+				}
+				
+				var map = new google.maps.Map(document.getElementById("maps"), mapOptions);
+				
+				// Creamos un marcador y lo posicionamos en el mapa
+				
+				var marcador = new google.maps.Marker({
+					position: new google.maps.LatLng(11.012203, -74.792069),
+					map: map,
+					title: 'Soluntech SAS',
+					icon: 'assets/imgs/marker.png'
+				});
+				
+				var infowindow = new google.maps.InfoWindow({
+					content: "<div class='blacked'>"+ data + "</div>"
+				});
+				
+				google.maps.event.addListener(marcador, 'click', function() {
+					infowindow.open(map,marcador);
+				});
+
+    
+     }
+
+     return this;
+
+}
 
 
 function contentApi($http) {
@@ -164,3 +209,4 @@ function contentApi($http) {
 
 angular.module('soluntech')
 .factory('$content', contentApi)
+.factory('$gmaps', initGmaps)

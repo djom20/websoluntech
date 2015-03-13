@@ -53,7 +53,7 @@ App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
         $routeProvider.
             when('/', {
                 templateUrl: 'partials/home.html',
-                controller: 'HomeCtrl'
+                controller: 'homeCtrl'
             }).
             otherwise({
                 redireTo: '/'
@@ -109,24 +109,6 @@ window.resizeMode = function(){
     }, 50);
 }
 
-function gMaps(){
-    var mapOptions = {
-        zoom: 16,
-        center: new google.maps.LatLng(11.0121669,-74.7929595),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: false,
-    }
-
-    var map = new google.maps.Map(document.getElementById("maps"), mapOptions);
-
-    // Creamos un marcador y lo posicionamos en el mapa
-    var marcador = new google.maps.Marker({
-        position: new google.maps.LatLng(11.012203, -74.792069),
-        map: map,
-        title: 'Soluntech SAS',
-        icon: 'assets/imgs/marker.png'
-    });
-}
 
 function loadScript() {
     var script = document.createElement("script");
