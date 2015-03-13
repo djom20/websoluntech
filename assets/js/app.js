@@ -45,12 +45,12 @@ App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
         }];
 
         $routeProvider.
-            when('/site', {
+            when('/', {
                 templateUrl: 'partials/home.html',
                 controller: 'homeCtrl'
             }).
             otherwise({
-                redireTo: '/site'
+                redireTo: '/'
             });
 
             //$locationProvider.html5Mode(true);

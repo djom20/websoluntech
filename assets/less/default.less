@@ -321,8 +321,28 @@ section .breadcrumb {
 	border-radius: 0;
 }
 
+
+.bgGrey{
+
+	&::-webkit-input-placeholder { /* WebKit browsers */
+		color:    #909;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color:    #909;
+		opacity:  1;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color:    #909;
+		opacity:  1;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		
+	}
+
+}
+
 #contact .form-group > label {
-	border-bottom: 1px solid #555;
+	border-bottom: 1px solid #D0D0D0;
 	width: 100%;
 }
 
