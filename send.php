@@ -10,7 +10,7 @@ error_reporting(-1);
 	 * @author djom202
 	 */
 
-	function Mail(){
+	function _Mail(){
 
 		if($_SESSION["csrf"] != $_POST["csrf"])
 		{
@@ -200,7 +200,7 @@ echo $_SERVER["REQUEST_METHOD"];
 		break;
 
 		case "POST":
-			  Mail();
+			  _Mail();
 		break;
 
 	}
