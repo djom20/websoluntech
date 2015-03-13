@@ -135,6 +135,29 @@
 		padding-top: 70px;
 	}
 
+	.navbar-default .navbar-nav>li>a>span {
+		display: block;
+		line-height: initial;
+	}
+
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.navbar > .container .navbar-collapse ul>li:last-of-type {
+		margin: initial;
+		padding: 0px;
+		width: initial;
+	}
+
+	.navbar > .container .navbar-collapse ul>li:last-of-type>a {
+		margin: initial;
+		padding: 10px 15px;
+		border: none;
+		text-align: left;
+	}
+
 	.navbar > .container .navbar-brand {
 		padding: 2px 14px;
 	}
