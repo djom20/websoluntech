@@ -152,7 +152,7 @@
 			</html>"; 
 
 	mail('jolier@soluntech.com', 'Send', $html, $headers);
-	echo array('_code' => 200, '_response' => 'Se envio el correo correctamente.');
+	echo json_encode(array('_code' => 200, '_response' => 'Se envio el correo correctamente.'));
 	// }else{ // echo 'No se envio el correo';
 	// 	echo $html;
 	// }
