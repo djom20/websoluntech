@@ -162,7 +162,7 @@ error_reporting(-1);
 				</body>
 			</html>"; 
 
-  if(mail('jolier@soluntech.com', 'Send', $html, $headers))
+  if(mail('info@soluntech.com', 'Contacto Cliente - Soluntech.com', $html, $headers))
   {
 	http_response_code(200);
   	echo json_encode(array('_code' => 200, '_response' => 'Se envio el correo correctamente.'));
