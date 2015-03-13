@@ -4,13 +4,8 @@ var App = angular.module('soluntech', [
 
 App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
     function($routeProvider, $httpProvider, $locationProvider) {
-        //Enable cross domain calls
         $httpProvider.defaults.useXDomain = true;
-
-        //Remove the header used to identify ajax call  that would prevent CORS from working
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
-        
-        // Use x-www-form-urlencoded Content-Type
         $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
         $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
@@ -45,7 +40,6 @@ App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
             return query.length ? query.substr(0, query.length - 1) : query;
         };
 
-        // Override $http service's default transformRequest
         $httpProvider.defaults.transformRequest = [function(data) {
             return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
         }];
@@ -60,8 +54,8 @@ App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
             });
 
             //$locationProvider.html5Mode(true);
-    }]
-)
+    }
+])
 .run(function($rootScope){
 
          resizeMode();

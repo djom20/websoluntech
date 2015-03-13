@@ -86,7 +86,30 @@ h1 {
 	padding: 4px 14px;
 }
 
-/* ALL */
+/* Videos */
+#videos {
+	background-color: #fff;
+	max-height: 1000px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+#videos video{
+	height: 70%;
+	/*width: 100%;*/
+}
+
+#videos .ui-video-background.ui-widget.ui-widget-content.ui-corner-all{
+	display: none;
+}
+
+/* HERLPERS */
+#SkypeButton_Call_soluntechSkype_1_paraElement img {
+	margin-left: 0 !important;
+}
+
 .navbar-default{
 	background: rgba(255,255,255,.85);
 	border: 0;
@@ -109,6 +132,8 @@ h1 {
 
 section.row{
 	padding: 70px 0;
+	position: relative;
+	z-index: 3;
 }
 
 .container {
@@ -119,8 +144,12 @@ section.row{
 .bgGrey {
 	/*background-color: #f2f2f2; */  /* Gris */
 	/*background-color: #0086BF; */  /* Azul */
-	background-color: #283A49; 
+	background-color: #283A49;
 	color: #fff;
+}
+
+.bgWhite {
+	background-color: rgba(255,255,255,1); 
 }
 
 .bgGrey h1{
@@ -128,16 +157,16 @@ section.row{
 }
 
 .btn-grey {
-	display: inline-block;
-	text-decoration: none;
-	color: #fff;
-	background-color: transparent;
-	border: 1px solid rgba(0,0,0,0.19999999999999996);
-	border-radius: 5px;
-	font-weight: 100;
 	-webkit-box-shadow: none;
-	box-shadow: none;
 	-webkit-transition: -webkit-box-shadow 0.3s ease;
+	background-color: transparent;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.19999999999999996);
+	box-shadow: none;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-decoration: none;
 	transition: box-shadow 0.3s ease;
 }
 
@@ -150,9 +179,7 @@ section.row{
 }
 
 .btn-grey.small{
-	margin-top: 7px;
 	padding: 9px 15px;
-	position: relative;
 }
 
 .breadcrumb {
@@ -230,7 +257,15 @@ section .breadcrumb {
 	backface-visibility:hidden;
 }
 
+.whiteborder{
+	border-color:white;
+}
+
 /* HOME */
+#home {
+	color: #fff;
+}
+
 #home > .container h1 {
 	font-size: 5em;
 	letter-spacing:1.5px;
@@ -313,7 +348,7 @@ section .breadcrumb {
 	/* Reset */
 	border: none;
 	box-shadow: none;
-	color:#444;
+	color:#fff;
 	resize:none;
 	font-weight: normal;
 	padding: 20px 0;
@@ -353,8 +388,8 @@ section .breadcrumb {
 }
 
 #maps {
+	background-color: #fff;
 	border: 1px;
-	width: 100%;
 	height: 400px;
 	margin-top: 30px;
 }

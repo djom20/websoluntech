@@ -1,4 +1,3 @@
- 
 angular.module('soluntech')
 .controller('homeCtrl', ['$scope', '$http', '$location', '$content', '$sce', '$gmaps',
     function($scope, $http, $location, $content, $sce, $gmaps) {
