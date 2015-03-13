@@ -87,22 +87,20 @@ h1 {
 }
 
 /* Videos */
-#videos {
-	background-color: #fff;
-	max-height: 1000px;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 2;
-}
-
-#videos video{
+/*#videos video{
 	height: 70%;
-	/*width: 100%;*/
 }
 
 #videos .ui-video-background.ui-widget.ui-widget-content.ui-corner-all{
 	display: none;
+}*/
+
+.fixed-video {
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
 
 /* HERLPERS */

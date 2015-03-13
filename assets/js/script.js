@@ -3,7 +3,7 @@ $(function(){
 	$(document).ready(function(){
 		resizeMode();
 		scrolls();
-		videoBackground();
+		// videoBackground();
 	});
 
 	window.onload = loadScript;
@@ -30,21 +30,21 @@ $(function(){
 	});
 });
 
-function videoBackground(){
-	var videoFiles = 
-	[
-		['https://s3.amazonaws.com/soluntech/videos/background.mp4', 'video/mp4'],
-		['https://s3.amazonaws.com/soluntech/videos/background.webm', 'video/webm']
-	];
+// function videoBackground(){
+// 	var videoFiles = 
+// 	[
+// 		['https://s3.amazonaws.com/soluntech/videos/background.mp4', 'video/mp4'],
+// 		['https://s3.amazonaws.com/soluntech/videos/background.webm', 'video/webm']
+// 	];
 
-	setTimeout(function(){
-		$('#videos').videobackground({
-			videoSource: videoFiles,
-			loop: true
-		});
-		$('#videos').videobackground('play');
-	}, 50);
-}
+// 	setTimeout(function(){
+// 		$('#videos').videobackground({
+// 			videoSource: videoFiles,
+// 			loop: true
+// 		});
+// 		$('#videos').videobackground('play');
+// 	}, 50);
+// }
 
 function resizeMode(){
 	var alto 	= $( window ).height();
@@ -54,10 +54,10 @@ function resizeMode(){
 
 	setTimeout(function(){
 		if(ancho > 768){
-			$('#videos, #videos>video').css('height', alto);
+			$('.fixed-video').css('height', alto);
 			$('#home').css('height', alto - 95);
 		}else{
-			$('#videos, #videos>video').css('height', alto);
+			$('.fixed-video').css('height', alto);
 			$('#home').css('height', alto - 70);
 		}
 	}, 80);
