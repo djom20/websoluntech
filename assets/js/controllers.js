@@ -135,6 +135,15 @@ angular.module('soluntech')
         $scope.sendEmail = function(){
             console.log('Enviar Email');
 
+
+            if(!$scope.formContact.name || !$scope.formContact.email || !$scope
+            	.formContact.message)
+            {
+            	alert('Debes rellenar todos los campos');
+            	angular.element('#contact form input:first').focus();
+            	return;
+            }
+
             $http.get('send.php')
             .success(function(rs){
             	 
