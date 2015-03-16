@@ -33,7 +33,7 @@ error_reporting(-1);
 		if(count($errors) > 0)
 		{
 			http_response_code(500);
-			echo json_encode('_code' => 500, '_response' => $errors);
+			echo json_encode(array('_code' => 500, '_response' => $errors));
 			die;
 		}
 
