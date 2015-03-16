@@ -24,7 +24,7 @@ error_reporting(-1);
 		if(!isset($_POST["name"]))
 			$errors[] = "No has ingresado un nombre valido";
 
-		if((!isset($_POST["email"])) || (!filter_var($_POST["email"], EMAIL)))
+		if((!isset($_POST["email"])) || (!filter_var($_POST["email"],  FILTER_VALIDATE_EMAI)))
 			$errors[] = "No has ingresado un correo valido";		
 
 		if(!isset($_POST["message"]) || (strlen($_POST["message"]) < 20))
