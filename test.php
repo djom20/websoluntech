@@ -91,7 +91,7 @@
 	                                </tbody>
                                 </table>
 							</td>
-	                    </td>
+	                    </tr>
 	                    <tr>
 							<td style=\"padding-bottom: 0px;\">
 								<table width=\"100%\" border=\"0\" align=\"center\" style=\"font-family:Arial,sans-serif;font-size:15px;margin:auto;background-color:#ffffff;color:#353e4a\" cellpadding=\"0\" cellspacing=\"0\">
@@ -103,21 +103,23 @@
                                 </table>
 							</td>
 	                    </tr>
-	                    <td style=\"background-color:#ececec\">
-                            <table width=\"100%\" border=\"0\" align=\"center\" style=\"color:#353e4a;font-family:Arial,sans-serif;font-size:14px;margin:auto;padding-bottom:10px\">
-                                <tbody>
-                                    <tr>
-                                        <td style=\"color:#717175;font-size:12px;padding-top:10px;padding-bottom:10px\">
-                                            Este email se ha generado automáticamente. Por favor, no conteste a este email.
-                                            Si tiene alguna pregunta o necesita ayuda, por favor haga click en <a href=\" \" style=\"color:#353e4a\" target=\"_blank\">Ayuda</a>.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style=\"color:#717175;font-size:12px;padding-top:10px;padding-bottom:10px\">Si no desea recibir más alertas como esta, por favor, haga click en <a href=\" \" style=\"color:#353e4a\ target=\"_blank\">Baja de alertas</a>.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
+	                    <tr>
+		                    <td style=\"background-color:#ececec\">
+	                            <table width=\"100%\" border=\"0\" align=\"center\" style=\"color:#353e4a;font-family:Arial,sans-serif;font-size:14px;margin:auto;padding-bottom:10px\">
+	                                <tbody>
+	                                    <tr>
+	                                        <td style=\"color:#717175;font-size:12px;padding-top:10px;padding-bottom:10px\">
+	                                            Este email se ha generado automáticamente. Por favor, no conteste a este email.
+	                                            Si tiene alguna pregunta o necesita ayuda, por favor haga click en <a href=\" \" style=\"color:#353e4a\" target=\"_blank\">Ayuda</a>.
+	                                        </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td style=\"color:#717175;font-size:12px;padding-top:10px;padding-bottom:10px\">Si no desea recibir más alertas como esta, por favor, haga click en <a href=\" \" style=\"color:#353e4a\ target=\"_blank\">Baja de alertas</a>.</td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                        </td>
+	                    </tr>
 	                </tbody>
 	            </table>";
 
