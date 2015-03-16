@@ -19,7 +19,25 @@ error_reporting(-1);
 			die;
 		}
 
-   $headers = "From: " . strip_tags('no-reply@soluntech.com') . "\r\n";
+		$erros = array();
+
+		if(!isset($_POST["name"]))
+			$errors[] = "No has ingresado un nombre valido";
+
+		if((!isset($_POST["email"])) || (!filter_var($_POST["email"], EMAIL)))
+			$errors[] = "No has ingresado un correo valido";		
+
+		if(!isset($_POST["message"]) || (strlen($_POST["message"]) < 20))
+			$errors[] = "no has ingresado un mensaje valido";		
+
+		if(count($errors) > 0)
+		{
+			http_response_code(500);
+			echo json_encode('_code' => 500, '_response' => $errors);
+			die;
+		}
+
+    $headers = "From: " . strip_tags('no-reply@soluntech.com') . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
