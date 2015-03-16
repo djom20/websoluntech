@@ -135,7 +135,7 @@ angular.module('soluntech')
         $scope.sendEmail = function(){
             console.log('Enviar Email');
 
-
+    //last
             if(!$scope.formContact.name || !$scope.formContact.email || !$scope
             	.formContact.message)
             {
@@ -145,7 +145,7 @@ angular.module('soluntech')
             }
 
             $http.get('send.php')
-            .success(function(rs){
+            .success(function(rs){ 
             	 
             	 console.log(rs);
             	 console.log($scope.formContact);
