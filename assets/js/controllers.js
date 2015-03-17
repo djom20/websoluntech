@@ -10,6 +10,7 @@ angular.module('soluntech')
 					 $gmaps.init($scope.contacto);
 			});
 
+
            $content
            .posts()
            .get()

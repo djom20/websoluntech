@@ -80,6 +80,22 @@ App.config(['$routeProvider', '$httpProvider', '$locationProvider' ,
         }
     });
 
+
+           
+          /* $('body').on('click','*[data-file]', function(e){
+
+                e.preventDefault();
+                e.stopPropagation();
+                 
+                 var $selector = 'input' + $(this).attr("data-file");
+
+                 console.log($selector);
+                 
+                 $($selector).click();
+
+             
+           });*/
+
 });
 
 
